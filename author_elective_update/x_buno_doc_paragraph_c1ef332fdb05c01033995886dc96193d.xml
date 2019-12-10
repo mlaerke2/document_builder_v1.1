@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_paragraph">
+    <x_buno_doc_paragraph action="DELETE">
+        <active>true</active>
+        <condition/>
+        <custom_html>false</custom_html>
+        <custom_numbering>false</custom_numbering>
+        <html_body><![CDATA[<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>]]></html_body>
+        <order>3</order>
+        <section display_value="section to">2b2f77ebdb05c01033995886dc961967</section>
+        <short_description>par - section to 3</short_description>
+        <sys_class_name>x_buno_doc_paragraph</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-17 19:38:05</sys_created_on>
+        <sys_id>c1ef332fdb05c01033995886dc96193d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>par - section to 3</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>x_buno_doc_paragraph_c1ef332fdb05c01033995886dc96193d</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-17 20:21:57</sys_updated_on>
+        <table>problem</table>
+    </x_buno_doc_paragraph>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
+        <file_path/>
+        <instance_id>b82d00e1db6f7644ff27d5b0cf96196c</instance_id>
+        <instance_name>businessnowsvsdemo3</instance_name>
+        <name>x_buno_doc_paragraph_c1ef332fdb05c01033995886dc96193d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_buno_doc_paragraph"&gt;&lt;x_buno_doc_paragraph action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;condition/&gt;&lt;custom_html&gt;false&lt;/custom_html&gt;&lt;custom_numbering&gt;false&lt;/custom_numbering&gt;&lt;html_body&gt;&lt;![CDATA[&lt;p&gt;&lt;strong&gt;Lorem Ipsum&lt;/strong&gt;&amp;nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/p&gt;]]&gt;&lt;/html_body&gt;&lt;order&gt;3&lt;/order&gt;&lt;section display_value="section to"&gt;2b2f77ebdb05c01033995886dc961967&lt;/section&gt;&lt;short_description&gt;par - section to 3&lt;/short_description&gt;&lt;sys_class_name&gt;x_buno_doc_paragraph&lt;/sys_class_name&gt;&lt;sys_created_by&gt;mla@businessnow.dk&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-11-17 19:38:05&lt;/sys_created_on&gt;&lt;sys_id&gt;c1ef332fdb05c01033995886dc96193d&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;par - section to 3&lt;/sys_name&gt;&lt;sys_package display_value="Document Builder" source="x_buno_doc"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Document Builder"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_scope&gt;&lt;sys_update_name&gt;x_buno_doc_paragraph_c1ef332fdb05c01033995886dc96193d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mla@businessnow.dk&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-11-17 20:21:57&lt;/sys_updated_on&gt;&lt;table&gt;problem&lt;/table&gt;&lt;/x_buno_doc_paragraph&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-785179970</payload_hash>
+        <record_name>par - section to 3</record_name>
+        <reverted_from/>
+        <source>96e3e7f2db4d001033995886dc96195a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-17 20:21:57</sys_created_on>
+        <sys_id>05f98437db45c01033995886dc9619f5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_recorded_at>16e7b0777880000001</sys_recorded_at>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-03 10:33:31</sys_updated_on>
+        <type>Paragraph</type>
+        <update_guid>0df984370345c010289099f213e655f4</update_guid>
+        <update_guid_history>0df984370345c010289099f213e655f4:-785179970,37e98437ec45c010af541a6516d198f1:1669610334,e6ef732ff605c01031b4a4b621f49b62:1519468991</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="par - section to 3">1f1f2139dba9845033995886dc96194a</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-06 19:07:29</sys_created_on>
+        <sys_db_object display_value="" name="x_buno_doc_paragraph">x_buno_doc_paragraph</sys_db_object>
+        <sys_id>e740c39f65ea4cac9fb5be4bac153401</sys_id>
+        <sys_metadata>c1ef332fdb05c01033995886dc96193d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>par - section to 3</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_scope_delete display_value="">25f41efe0f984d6895ad3fb4d47fd1c9</sys_scope_delete>
+        <sys_update_name>x_buno_doc_paragraph_c1ef332fdb05c01033995886dc96193d</sys_update_name>
+        <sys_update_version display_value="x_buno_doc_paragraph_c1ef332fdb05c01033995886dc96193d">05f98437db45c01033995886dc9619f5</sys_update_version>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-06 19:07:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

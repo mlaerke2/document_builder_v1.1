@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_template_headers">
+    <x_buno_doc_template_headers action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <file_type>pdf</file_type>
+        <footer_first_page/>
+        <footer_first_page_display><![CDATA[BusinessNowVandtårnsvej 62A - 2860 Søborg - Denmark]]></footer_first_page_display>
+        <footer_second_page/>
+        <footer_second_page_display/>
+        <header_first_page/>
+        <header_first_page_display/>
+        <header_second_page/>
+        <header_second_page_display/>
+        <image_alignment>0</image_alignment>
+        <pdf_footer>BusinessNow - Vandtårnsvej 62A - 2860 Søborg</pdf_footer>
+        <sys_class_name>x_buno_doc_template_headers</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-18 09:51:39</sys_created_on>
+        <sys_id>ce434fb7db8dc01033995886dc96190f</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>x_buno_doc_template_headers_ce434fb7db8dc01033995886dc96190f</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 21:36:17</sys_updated_on>
+    </x_buno_doc_template_headers>
+</record_update>

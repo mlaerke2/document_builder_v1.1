@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_template">
+    <x_buno_doc_template action="DELETE">
+        <active>true</active>
+        <condition/>
+        <custom_headers_and_footers>true</custom_headers_and_footers>
+        <document_type>word</document_type>
+        <file_name>LOA ${userName}</file_name>
+        <footer_first_page>&lt;div style="mso-element:footer" id=ff1&gt;    &#13;
+&lt;p align="center" style="text-align:center"&gt;&lt;span style="font-size:7.0pt;font-family:Verdana,sans-serif"&gt;&lt;br/&gt;Maersk Drilling A/S&lt;br/&gt;Lyngby Hovedgade 85&lt;br/&gt;2800 Kgs. Lyngby&lt;br/&gt;&lt;a href="www.maerskdrilling.com"&gt;www.maerskdrilling.com&lt;/a&gt;&lt;br/&gt;CVR no. 32 67 38 21&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;</footer_first_page>
+        <footer_second_page>&lt;div style="mso-element:footer" id=f1&gt;    &#13;
+&lt;p align="center" style="text-align:center"&gt;&lt;span style="font-size:7.0pt;font-family:Verdana,sans-serif"&gt;&lt;br/&gt;Maersk Drilling A/S&lt;br/&gt;Lyngby Hovedgade 85&lt;br/&gt;2800 Kgs. Lyngby&lt;br/&gt;&lt;a href="www.maerskdrilling.com"&gt;www.maerskdrilling.com&lt;/a&gt;&lt;br/&gt;CVR no. 32 67 38 21&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;</footer_second_page>
+        <header_first_page>&lt;div style='mso-element:header' id=fh1&gt;&#13;
+${headerLogo}&#13;
+&lt;/div&gt;</header_first_page>
+        <header_logo display_value="sn-logo-light-green-email.png">c5fd67923b512300c869c2c703efc4c2</header_logo>
+        <header_second_page>&lt;div style='mso-element:header' id=h1&gt;&#13;
+${headerLogo}&#13;
+&lt;/div&gt;</header_second_page>
+        <image_alignment>0</image_alignment>
+        <language>english</language>
+        <pdf_footer/>
+        <short_description>MD Offshore LOA - Mobilization</short_description>
+        <sys_class_name>x_buno_doc_template</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-04 08:15:36</sys_created_on>
+        <sys_id>50164d89db61045033995886dc96190e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>MD Offshore LOA - Mobilization</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>x_buno_doc_template_50164d89db61045033995886dc96190e</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-04 09:24:26</sys_updated_on>
+        <table>incident</table>
+        <template_owner display_value="Mikkel Lærke Alimooti">b4be50dfdbe8001033995886dc9619bb</template_owner>
+        <type/>
+    </x_buno_doc_template>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
+        <file_path/>
+        <instance_id>b82d00e1db6f7644ff27d5b0cf96196c</instance_id>
+        <instance_name>businessnowsvsdemo3</instance_name>
+        <name>x_buno_doc_template_50164d89db61045033995886dc96190e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_template"><x_buno_doc_template action="INSERT_OR_UPDATE"><active>true</active><condition/><custom_headers_and_footers>true</custom_headers_and_footers><document_type>word</document_type><file_name>LOA ${userName}</file_name><footer_first_page>&lt;div style="mso-element:footer" id=ff1&gt;    &#13;
+&lt;p align="center" style="text-align:center"&gt;&lt;span style="font-size:7.0pt;font-family:Verdana,sans-serif"&gt;&lt;br/&gt;Maersk Drilling A/S&lt;br/&gt;Lyngby Hovedgade 85&lt;br/&gt;2800 Kgs. Lyngby&lt;br/&gt;&lt;a href="www.maerskdrilling.com"&gt;www.maerskdrilling.com&lt;/a&gt;&lt;br/&gt;CVR no. 32 67 38 21&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;</footer_first_page><footer_second_page>&lt;div style="mso-element:footer" id=f1&gt;    &#13;
+&lt;p align="center" style="text-align:center"&gt;&lt;span style="font-size:7.0pt;font-family:Verdana,sans-serif"&gt;&lt;br/&gt;Maersk Drilling A/S&lt;br/&gt;Lyngby Hovedgade 85&lt;br/&gt;2800 Kgs. Lyngby&lt;br/&gt;&lt;a href="www.maerskdrilling.com"&gt;www.maerskdrilling.com&lt;/a&gt;&lt;br/&gt;CVR no. 32 67 38 21&lt;/span&gt;&lt;/p&gt;&#13;
+&lt;/div&gt;</footer_second_page><header_first_page>&lt;div style='mso-element:header' id=fh1&gt;&#13;
+${headerLogo}&#13;
+&lt;/div&gt;</header_first_page><header_logo display_value="sn-logo-light-green-email.png">c5fd67923b512300c869c2c703efc4c2</header_logo><header_second_page>&lt;div style='mso-element:header' id=h1&gt;&#13;
+${headerLogo}&#13;
+&lt;/div&gt;</header_second_page><image_alignment>0</image_alignment><language>english</language><pdf_footer/><short_description>MD Offshore LOA - Mobilization</short_description><sys_class_name>x_buno_doc_template</sys_class_name><sys_created_by>mla@businessnow.dk</sys_created_by><sys_created_on>2019-12-04 08:15:36</sys_created_on><sys_id>50164d89db61045033995886dc96190e</sys_id><sys_mod_count>2</sys_mod_count><sys_name>MD Offshore LOA - Mobilization</sys_name><sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package><sys_policy/><sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope><sys_update_name>x_buno_doc_template_50164d89db61045033995886dc96190e</sys_update_name><sys_updated_by>mla@businessnow.dk</sys_updated_by><sys_updated_on>2019-12-04 09:24:26</sys_updated_on><table>incident</table><template_owner display_value="Mikkel Lærke Alimooti">b4be50dfdbe8001033995886dc9619bb</template_owner><type/></x_buno_doc_template></record_update>]]></payload>
+        <payload_hash>-1561738678</payload_hash>
+        <record_name>MD Offshore LOA - Mobilization</record_name>
+        <reverted_from/>
+        <source>96e3e7f2db4d001033995886dc96195a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-04 13:48:05</sys_created_on>
+        <sys_id>51d25e49db65045033995886dc9619fa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_recorded_at>16ed12afbd60000001</sys_recorded_at>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 20:04:07</sys_updated_on>
+        <type>Template</type>
+        <update_guid>59d25e494b650450003008819c5dd4f9</update_guid>
+        <update_guid_history>59d25e494b650450003008819c5dd4f9:-1561738678,e5b25a49f96504509799f272dacf2db1:-1664243394,19425649626504506e68da798dfcc5c4:-1561738678,dbf152490a6504505957297e4ffec0b2:-1664243394,70f15249b0650450ed5fc4096cb1020d:-1561738678,cec19e0976650450e5de4adf8018a3a4:-1664243394,2f419609516504505a02860ecd5ddd48:-1561738678,53115609fa650450fec22d2f2f855839:-1664243394,d7761d0993a10450488b3bcd1da43ffd:-1561738678,81e1dd0503a1045011746f6cf3bb4b33:36055741,7ab645c93d6104504ef9e3b5f6e3397b:-1561738678</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="MD Offshore LOA - Mobilization">bb239289db65045033995886dc9619b0</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-04 13:49:38</sys_created_on>
+        <sys_db_object display_value="" name="x_buno_doc_template">x_buno_doc_template</sys_db_object>
+        <sys_id>081ea5379cc84f6c81914769846e7e10</sys_id>
+        <sys_metadata>50164d89db61045033995886dc96190e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>MD Offshore LOA - Mobilization</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_scope_delete display_value="">25f41efe0f984d6895ad3fb4d47fd1c9</sys_scope_delete>
+        <sys_update_name>x_buno_doc_template_50164d89db61045033995886dc96190e</sys_update_name>
+        <sys_update_version display_value="x_buno_doc_template_50164d89db61045033995886dc96190e">51d25e49db65045033995886dc9619fa</sys_update_version>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-04 13:49:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>This script is done to nudge (with both hands) the user to create all templates in Global Scope</description>
+        <field>active</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>DB - Scope Restriction</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+
+	if(!g_form.isNewRecord()){
+		return;
+	}
+
+	var ga = new GlideAjax('global.UnloadToUpdateSetGlobal');
+	ga.addParam('sysparm_name', 'getUpdateSetNameClient');
+	ga.getXML(getCallBackAnswer);
+
+	function getCallBackAnswer(response) {
+
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+		answer = JSON.parse(answer);
+
+		if(!answer.correctScope){
+
+			g_form.addErrorMessage('You are not in Global scope. Change Scope if possible');
+
+			if (g_form.isNewRecord()) {
+
+				var fields = g_form.elements;
+				for(var i = 0; i < fields.length; i++){
+
+					var field = fields[i].fieldName;
+					g_form.setMandatory(field, false);
+					g_form.setReadOnly(field, true);
+
+				}
+			}
+		}
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-05 19:42:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f88d6465dba9445033995886dc961977</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DB - Scope Restriction</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_script_client_f88d6465dba9445033995886dc961977</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 19:42:23</sys_updated_on>
+        <table>x_buno_doc_paragraph</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_paragraph">
+    <x_buno_doc_paragraph action="DELETE">
+        <active>true</active>
+        <condition/>
+        <custom_html>true</custom_html>
+        <custom_numbering>true</custom_numbering>
+        <html_body><![CDATA[<p>&nbsp;</p>
+<table class="MsoTableGrid" style="border-collapse: collapse; mso-table-layout-alt: fixed; border: none; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-insideh: none; mso-border-insidev: none;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes; height: 80.1pt;">
+<td style="width: 161.35pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 80.1pt;" valign="top" width="215">
+<p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-bidi-font-family: Tahoma; mso-ansi-language: EN-US;">Position:</span></p>
+<p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-bidi-font-family: Tahoma; mso-ansi-language: EN-US;">Proposed Start Date:</span></p>
+<p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;">Monthly Salary </span></p>
+<p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;">End date:<strong style="mso-bidi-font-weight: normal;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span></strong></span></p>
+<p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-bidi-font-family: Tahoma; mso-ansi-language: EN-US;">Employer:</span></p>
+<p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;">Rotation:<strong style="mso-bidi-font-weight: normal;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span></strong></span></p>
+<p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;">Location </span></p>
+<p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;">&nbsp;</span></p>
+<p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;">Deadline for Offer:<strong style="mso-bidi-font-weight: normal;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun: yes;">&nbsp;&nbsp;</span></strong></span></p>
+</td>
+<td style="width: 195.1pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 80.1pt;" valign="top" width="260">
+<p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"><strong style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;">${SomeVariableNotFound}</span></strong></p>
+<p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"><strong style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;">[start_date]</span></strong></p>
+<p class="MsoNormal" style="text-align: justify;"><strong style="mso-bidi-font-weight: normal;"><span lang="EN-GB" style="mso-bidi-font-size: 9.0pt;">[Currency] [Salary]</span></strong></p>
+<p class="MsoNormal" style="text-align: justify;"><strong style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;">[Last Pay Date]</span></strong></p>
+<p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"><strong style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-bidi-font-family: Tahoma; mso-ansi-language: EN-US;">[Employer]</span></strong></p>
+<p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"><strong style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;">[Rotation]</span></strong></p>
+<p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"><strong style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;">[Location]</span></strong></p>
+<p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"><strong style="mso-bidi-font-weight: normal;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;">&nbsp;</span></strong></p>
+<p class="MsoNormal" style="text-align: justify;"><span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;">7 Days from date of issue</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">You are planned to be assigned to one of the units operating in Norwegian waters. Please note that you are in a position to request and to be transferred to other rigs operated by some great company at a later stage.&nbsp;</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva; font-size: 10pt;">Employees with a start date after the 15<sup>th</sup> will receive their first salary at the end of the following month. In order to be eligible for any bonus or retention payment the employee must be in employment at the time the payment is made.</span></p>
+<p style="text-align: justify;"><span style="font-family: verdana, geneva; font-size: 10pt;">Pension and insurances consist of 13,1% company contribution and 2% personal contribution. You may increase personal contribution on own request. Enclosed, please find some information regarding pension scheme, and insurance package. &nbsp;</span></p>
+<p>&nbsp;</p>]]></html_body>
+        <order>1</order>
+        <section display_value="This section will contain custom HTML">18b6b2a5db95481033995886dc96193c</section>
+        <short_description>par - This section will contain custom HTML</short_description>
+        <sys_class_name>x_buno_doc_paragraph</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-23 19:28:45</sys_created_on>
+        <sys_id>b1077aa5db95481033995886dc961917</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>par - This section will contain custom HTML</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>x_buno_doc_paragraph_b1077aa5db95481033995886dc961917</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-03 10:46:30</sys_updated_on>
+        <table>incident</table>
+    </x_buno_doc_paragraph>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
+        <file_path/>
+        <instance_id>b82d00e1db6f7644ff27d5b0cf96196c</instance_id>
+        <instance_name>businessnowsvsdemo3</instance_name>
+        <name>x_buno_doc_paragraph_b1077aa5db95481033995886dc961917</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_buno_doc_paragraph"&gt;&lt;x_buno_doc_paragraph action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;condition/&gt;&lt;custom_html&gt;true&lt;/custom_html&gt;&lt;custom_numbering&gt;true&lt;/custom_numbering&gt;&lt;html_body&gt;&lt;![CDATA[&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;table class="MsoTableGrid" style="border-collapse: collapse; mso-table-layout-alt: fixed; border: none; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-border-insideh: none; mso-border-insidev: none;" border="0" cellspacing="0" cellpadding="0"&gt;
+&lt;tbody&gt;
+&lt;tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes; height: 80.1pt;"&gt;
+&lt;td style="width: 161.35pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 80.1pt;" valign="top" width="215"&gt;
+&lt;p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-bidi-font-family: Tahoma; mso-ansi-language: EN-US;"&gt;Position:&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-bidi-font-family: Tahoma; mso-ansi-language: EN-US;"&gt;Proposed Start Date:&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;"&gt;Monthly Salary &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;"&gt;End date:&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-bidi-font-family: Tahoma; mso-ansi-language: EN-US;"&gt;Employer:&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;"&gt;Rotation:&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;"&gt;Location &lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;"&gt;Deadline for Offer:&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;/span&gt;&lt;span style="mso-spacerun: yes;"&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="width: 195.1pt; padding: 0cm 5.4pt 0cm 5.4pt; height: 80.1pt;" valign="top" width="260"&gt;
+&lt;p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;"&gt;${SomeVariableNotFound}&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;"&gt;[start_date]&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify;"&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span lang="EN-GB" style="mso-bidi-font-size: 9.0pt;"&gt;[Currency] [Salary]&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify;"&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;"&gt;[Last Pay Date]&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-bidi-font-family: Tahoma; mso-ansi-language: EN-US;"&gt;[Employer]&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;"&gt;[Rotation]&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;"&gt;[Location]&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify; mso-layout-grid-align: none; text-autospace: none;"&gt;&lt;strong style="mso-bidi-font-weight: normal;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="text-align: justify;"&gt;&lt;span lang="EN-US" style="mso-bidi-font-size: 9.0pt; mso-ansi-language: EN-US;"&gt;7 Days from date of issue&lt;/span&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;You are planned to be assigned to one of the units operating in Norwegian waters. Please note that you are in a position to request and to be transferred to other rigs operated by some great company at a later stage.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;Employees with a start date after the 15&lt;sup&gt;th&lt;/sup&gt; will receive their first salary at the end of the following month. In order to be eligible for any bonus or retention payment the employee must be in employment at the time the payment is made.&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: justify;"&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;Pension and insurances consist of 13,1% company contribution and 2% personal contribution. You may increase personal contribution on own request. Enclosed, please find some information regarding pension scheme, and insurance package. &amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;]]&gt;&lt;/html_body&gt;&lt;order&gt;1&lt;/order&gt;&lt;section display_value="This section will contain custom HTML"&gt;18b6b2a5db95481033995886dc96193c&lt;/section&gt;&lt;short_description&gt;par - This section will contain custom HTML&lt;/short_description&gt;&lt;sys_class_name&gt;x_buno_doc_paragraph&lt;/sys_class_name&gt;&lt;sys_created_by&gt;mla@businessnow.dk&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-11-23 19:28:45&lt;/sys_created_on&gt;&lt;sys_id&gt;b1077aa5db95481033995886dc961917&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;par - This section will contain custom HTML&lt;/sys_name&gt;&lt;sys_package display_value="Document Builder" source="x_buno_doc"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Document Builder"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_scope&gt;&lt;sys_update_name&gt;x_buno_doc_paragraph_b1077aa5db95481033995886dc961917&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mla@businessnow.dk&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-12-03 10:46:30&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;/x_buno_doc_paragraph&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-163705959</payload_hash>
+        <record_name>par - This section will contain custom HTML</record_name>
+        <reverted_from/>
+        <source>21ce37abdb05c01033995886dc961925</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-03 10:46:31</sys_created_on>
+        <sys_id>f7af1830dbe1c05033995886dc961997</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16ecb5e634d0000001</sys_recorded_at>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-03 10:46:31</sys_updated_on>
+        <type>Paragraph</type>
+        <update_guid>33af183019e1c050b8f86ba21abde397</update_guid>
+        <update_guid_history>33af183019e1c050b8f86ba21abde397:-163705959,c0a19a8f74118c1020cf482b13811ef4:-481972811,7905041a2ed1c8106c153964bee6f99a:872102586,1c573aa51e9548100c126f6f3504354f:-2134678375</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="par - This section will contain custom HTML">eeb43319dbe5445033995886dc961980</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-05 15:34:17</sys_created_on>
+        <sys_db_object display_value="" name="x_buno_doc_paragraph">x_buno_doc_paragraph</sys_db_object>
+        <sys_id>055f2c0ec9aa4eb38d7f4387180b25f1</sys_id>
+        <sys_metadata>b1077aa5db95481033995886dc961917</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>par - This section will contain custom HTML</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_scope_delete display_value="">25f41efe0f984d6895ad3fb4d47fd1c9</sys_scope_delete>
+        <sys_update_name>x_buno_doc_paragraph_b1077aa5db95481033995886dc961917</sys_update_name>
+        <sys_update_version display_value="x_buno_doc_paragraph_b1077aa5db95481033995886dc961917">f7af1830dbe1c05033995886dc961997</sys_update_version>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 15:34:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

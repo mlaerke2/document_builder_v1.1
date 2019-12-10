@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="DELETE">
+        <active>true</active>
+        <conditions/>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>Make displays read only</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-18 09:42:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6c318f37db8dc01033995886dc961975</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Make displays read only</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_ui_policy_6c318f37db8dc01033995886dc961975</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-24 19:44:24</sys_updated_on>
+        <table>x_buno_doc_template_headers</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
+        <file_path/>
+        <instance_id>b82d00e1db6f7644ff27d5b0cf96196c</instance_id>
+        <instance_name>businessnowsvsdemo3</instance_name>
+        <name>sys_ui_policy_6c318f37db8dc01033995886dc961975</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_policy"&gt;&lt;sys_ui_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;conditions/&gt;&lt;description/&gt;&lt;global&gt;true&lt;/global&gt;&lt;inherit&gt;false&lt;/inherit&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;model_id/&gt;&lt;model_table/&gt;&lt;on_load&gt;true&lt;/on_load&gt;&lt;order&gt;100&lt;/order&gt;&lt;reverse_if_false&gt;true&lt;/reverse_if_false&gt;&lt;run_scripts&gt;false&lt;/run_scripts&gt;&lt;script_false&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_false&gt;&lt;script_true&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_true&gt;&lt;set_values/&gt;&lt;short_description&gt;Make displays read only&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ui_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;mla@businessnow.dk&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-11-18 09:42:44&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;6c318f37db8dc01033995886dc961975&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Make displays read only&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Document Builder" source="x_buno_doc"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Document Builder"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_policy_6c318f37db8dc01033995886dc961975&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mla@businessnow.dk&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-11-24 19:44:24&lt;/sys_updated_on&gt;&lt;table&gt;x_buno_doc_template_headers&lt;/table&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_ui_policy&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-661582812</payload_hash>
+        <record_name>Make displays read only</record_name>
+        <reverted_from/>
+        <source>c4538f36dbc9001033995886dc961960</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-24 19:44:24</sys_created_on>
+        <sys_id>df74040edb95881033995886dc9619ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e9ef19b520000001</sys_recorded_at>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-24 19:44:24</sys_updated_on>
+        <type>UI Policy</type>
+        <update_guid>d774040e20958810359ab884171bf4ca</update_guid>
+        <update_guid_history>d774040e20958810359ab884171bf4ca:-661582812,8c272a119f5908108f34adb6ef6c6efc:-1933837340,acf6e611da59081055ffc90a2ae12850:-608391943,1f318f376f8dc0108739dc62280b8519:-1933837340</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-24 19:47:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy">sys_ui_policy</sys_db_object>
+        <sys_id>8fad7b06b8b24121b1e9a9f7e2d90aa9</sys_id>
+        <sys_metadata>6c318f37db8dc01033995886dc961975</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Make displays read only</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_parent display_value="Template Headers">226a72bfdb4dc01033995886dc961920</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_scope_delete display_value="">25f41efe0f984d6895ad3fb4d47fd1c9</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_6c318f37db8dc01033995886dc961975</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_6c318f37db8dc01033995886dc961975">df74040edb95881033995886dc9619ca</sys_update_version>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-24 19:47:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

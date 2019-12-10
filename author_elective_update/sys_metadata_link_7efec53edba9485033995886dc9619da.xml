@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="DELETE">
+        <directory>unload.demo</directory>
+        <documentkey>91571bf7dbcdc01033995886dc961973</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_template">
+    <x_buno_doc_template action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <custom_headers_and_footers>false</custom_headers_and_footers>
+        <document_type>document</document_type>
+        <file_name>PDF Header Test</file_name>
+        <file_type>pdf</file_type>
+        <footer_first_page/>
+        <footer_second_page/>
+        <header_first_page/>
+        <header_logo display_value="sn-logo-dark-green-email.png">401ea7923b512300c869c2c703efc486</header_logo>
+        <header_second_page/>
+        <image_alignment>0</image_alignment>
+        <language>english</language>
+        <pdf_footer/>
+        <short_description>Headers Test PDF</short_description>
+        <sys_class_name>x_buno_doc_template</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-18 11:19:16</sys_created_on>
+        <sys_id>91571bf7dbcdc01033995886dc961973</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Headers Test PDF</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>x_buno_doc_template_91571bf7dbcdc01033995886dc961973</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 20:38:28</sys_updated_on>
+        <table>x_buno_doc_template_headers</table>
+        <template_owner display_value="Mikkel Lærke Alimooti">b4be50dfdbe8001033995886dc9619bb</template_owner>
+    </x_buno_doc_template>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-09 19:21:01</sys_created_on>
+        <sys_id>7efec53edba9485033995886dc9619da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Headers Test PDF</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_metadata_link_7efec53edba9485033995886dc9619da</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-09 19:21:01</sys_updated_on>
+        <tablename>x_buno_doc_template</tablename>
+    </sys_metadata_link>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
+        <file_path/>
+        <instance_id>b82d00e1db6f7644ff27d5b0cf96196c</instance_id>
+        <instance_name>businessnowsvsdemo3</instance_name>
+        <name>sys_metadata_link_7efec53edba9485033995886dc9619da</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_metadata_link"&gt;&lt;sys_metadata_link action="INSERT_OR_UPDATE"&gt;&lt;directory&gt;unload.demo&lt;/directory&gt;&lt;documentkey&gt;91571bf7dbcdc01033995886dc961973&lt;/documentkey&gt;&lt;payload&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_buno_doc_template"&gt;
+    &lt;x_buno_doc_template action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;condition/&gt;
+        &lt;custom_headers_and_footers&gt;false&lt;/custom_headers_and_footers&gt;
+        &lt;document_type&gt;document&lt;/document_type&gt;
+        &lt;file_name&gt;PDF Header Test&lt;/file_name&gt;
+        &lt;file_type&gt;pdf&lt;/file_type&gt;
+        &lt;footer_first_page/&gt;
+        &lt;footer_second_page/&gt;
+        &lt;header_first_page/&gt;
+        &lt;header_logo display_value="sn-logo-dark-green-email.png"&gt;401ea7923b512300c869c2c703efc486&lt;/header_logo&gt;
+        &lt;header_second_page/&gt;
+        &lt;image_alignment&gt;0&lt;/image_alignment&gt;
+        &lt;language&gt;english&lt;/language&gt;
+        &lt;pdf_footer/&gt;
+        &lt;short_description&gt;Headers Test PDF&lt;/short_description&gt;
+        &lt;sys_class_name&gt;x_buno_doc_template&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;mla@businessnow.dk&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2019-11-18 11:19:16&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;91571bf7dbcdc01033995886dc961973&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;Headers Test PDF&lt;/sys_name&gt;
+        &lt;sys_package display_value="Document Builder" source="x_buno_doc"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Document Builder"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;x_buno_doc_template_91571bf7dbcdc01033995886dc961973&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;mla@businessnow.dk&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2019-12-05 20:38:28&lt;/sys_updated_on&gt;
+        &lt;table&gt;x_buno_doc_template_headers&lt;/table&gt;
+        &lt;template_owner display_value="Mikkel Lærke Alimooti"&gt;b4be50dfdbe8001033995886dc9619bb&lt;/template_owner&gt;
+    &lt;/x_buno_doc_template&gt;
+&lt;/record_update&gt;
+]]&gt;&lt;/payload&gt;&lt;sys_class_name&gt;sys_metadata_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;mla@businessnow.dk&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-12-09 19:21:01&lt;/sys_created_on&gt;&lt;sys_id&gt;7efec53edba9485033995886dc9619da&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Headers Test PDF&lt;/sys_name&gt;&lt;sys_package display_value="Document Builder" source="x_buno_doc"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Document Builder"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_metadata_link_7efec53edba9485033995886dc9619da&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mla@businessnow.dk&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-12-09 19:21:01&lt;/sys_updated_on&gt;&lt;tablename&gt;x_buno_doc_template&lt;/tablename&gt;&lt;/sys_metadata_link&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-359835713</payload_hash>
+        <record_name>Headers Test PDF</record_name>
+        <reverted_from/>
+        <source>c4538f36dbc9001033995886dc961960</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-09 19:21:01</sys_created_on>
+        <sys_id>befec53edba9485033995886dc9619db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16eec1b96a80000001</sys_recorded_at>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-09 19:21:01</sys_updated_on>
+        <type>Metadata Snapshot</type>
+        <update_guid>b6fec53ef3a9485067df4f523c25a8db</update_guid>
+        <update_guid_history>b6fec53ef3a9485067df4f523c25a8db:-359835713</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-09 19:21:53</sys_created_on>
+        <sys_db_object display_value="" name="sys_metadata_link">sys_metadata_link</sys_db_object>
+        <sys_id>1bbcd951c87344ba9071106158011119</sys_id>
+        <sys_metadata>7efec53edba9485033995886dc9619da</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Headers Test PDF</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_scope_delete display_value="">25f41efe0f984d6895ad3fb4d47fd1c9</sys_scope_delete>
+        <sys_update_name>sys_metadata_link_7efec53edba9485033995886dc9619da</sys_update_name>
+        <sys_update_version display_value="sys_metadata_link_7efec53edba9485033995886dc9619da">befec53edba9485033995886dc9619db</sys_update_version>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-09 19:21:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

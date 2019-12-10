@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>ca6c8e23dbcd801033995886dc9619a4</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;
+    &lt;sys_script_include action="INSERT_OR_UPDATE"&gt;
+        &lt;access&gt;public&lt;/access&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;api_name&gt;global.UnloadToUpdateSetGlobal&lt;/api_name&gt;
+        &lt;caller_access/&gt;
+        &lt;client_callable&gt;true&lt;/client_callable&gt;
+        &lt;description/&gt;
+        &lt;name&gt;UnloadToUpdateSetGlobal&lt;/name&gt;
+        &lt;script&gt;&lt;![CDATA[var UnloadToUpdateSetGlobal = Class.create();
+UnloadToUpdateSetGlobal.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+
+	TEMPLATE_TABLE: 'x_buno_doc_template',
+	SECTION_TABLE: 'x_buno_doc_section',
+	PARAGRAPH_TABLE: 'x_buno_doc_paragraph',
+	TEMPLATE_SECTION_REL_TABLE: 'x_buno_doc_m2m_sections_templates',
+	LOG: new global.GSLog('x_buno_doc.document.builder.log.level', 'UnloadToUpdateSetGlobal'),
+
+	forceToUpdateSet : function(template) {
+
+		var templateID = template || this.getParameter('sysparm_template');
+
+		return this.forceListToUpdateSet(templateID);
+	},
+
+	forceListToUpdateSet : function(templateID) {
+
+		var count = 0;
+		var template = new GlideRecord(this.TEMPLATE_TABLE);
+		var answerObj = {
+			msg: '', 
+			type: ''
+		};
+
+		try {
+
+			var um = new GlideUpdateManager2();
+
+			if(template.get(templateID)){
+				um.saveRecord(template);
+				count++;
+
+				var section = new GlideRecord(this.SECTION_TABLE);
+				section.addQuery('template', templateID);
+				section.query();
+				while(section.next()){
+
+					count++;
+					um.saveRecord(section);
+
+					//Query for Paragraps
+					var paragraph = new GlideRecord(this.PARAGRAPH_TABLE);
+					paragraph.addQuery("section", section.getUniqueValue());
+					paragraph.query();
+					while(paragraph.next()) {
+						count++;
+						um.saveRecord(paragraph);
+					}
+				}
+			}
+
+
+			var usName = this.getUpdateSetNameServer();
+
+			
+			
+			answerObj.msg = count + ' records included in "' + usName + '" update set.';
+			answerObj.type = 'info';
+
+			return JSON.stringify(answerObj);
+
+		}
+		catch (ex) {
+			answerObj.msg = 'There was an error adding records to the update set: ' + ex; 
+			answerObj.type = 'error';
+
+			return JSON.stringify(answerObj);
+		}
+	},
+	
+	getUpdateSetNameServer : function() {	
+
+		var setID = gs.getPreference('sys_update_set');
+		var us = new GlideRecord('sys_update_set');
+		us.get(setID);
+
+		return us.name;
+	},
+
+	getUpdateSetNameClient : function() {
+
+		var globalScope = 'global';			
+
+		var setID = gs.getPreference('sys_update_set');
+		var us = new GlideRecord('sys_update_set');
+		us.get(setID);
+
+		var anserObj = {
+			usName: us.name + '',
+			correctScope: (gs.getCurrentApplicationId() == globalScope)
+		};
+		return JSON.stringify(anserObj);
+	},
+
+
+	type: 'UnloadToUpdateSetGlobal'
+});]]&gt;&lt;/script&gt;
+        &lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;mla@businessnow.dk&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2019-11-17 11:18:35&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;ca6c8e23dbcd801033995886dc9619a4&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;15&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;UnloadToUpdateSetGlobal&lt;/sys_name&gt;
+        &lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;sys_script_include_ca6c8e23dbcd801033995886dc9619a4&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;mla@businessnow.dk&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2019-12-04 14:01:37&lt;/sys_updated_on&gt;
+    &lt;/sys_script_include&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-09 19:28:28</sys_created_on>
+        <sys_id>4cb05d7edba9485033995886dc9619bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>UnloadToUpdateSetGlobal</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_metadata_link_4cb05d7edba9485033995886dc9619bc</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-09 19:28:28</sys_updated_on>
+        <tablename>sys_script_include</tablename>
+    </sys_metadata_link>
+</record_update>

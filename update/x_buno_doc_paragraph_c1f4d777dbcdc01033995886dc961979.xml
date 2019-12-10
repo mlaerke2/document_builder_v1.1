@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_paragraph">
+    <x_buno_doc_paragraph action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <custom_html>true</custom_html>
+        <custom_numbering>true</custom_numbering>
+        <html_body><![CDATA[<p>${pageBreak}&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: center;">This is also a blank page</p>]]></html_body>
+        <order>2</order>
+        <section display_value="This Word headline will not be shown ">0afbcf7fdb8dc01033995886dc961948</section>
+        <short_description>par - This headline will not be shown 2</short_description>
+        <sys_class_name>x_buno_doc_paragraph</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-18 11:09:20</sys_created_on>
+        <sys_id>c1f4d777dbcdc01033995886dc961979</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>par - This headline will not be shown 2</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>x_buno_doc_paragraph_c1f4d777dbcdc01033995886dc961979</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-04 10:40:50</sys_updated_on>
+        <table>x_buno_doc_template_headers</table>
+    </x_buno_doc_paragraph>
+</record_update>

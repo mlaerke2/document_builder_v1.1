@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="DELETE">
+        <category display_value="Document Bulder Properties">f511900fdbcd001033995886dc9619dd</category>
+        <order>3</order>
+        <property display_value="x_buno_doc.word.2nd.header" name="x_buno_doc.word.2nd.header">2d421c4fdbcd001033995886dc961923</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 13:03:07</sys_created_on>
+        <sys_id>1552d84fdbcd001033995886dc9619c4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_buno_doc.word.2nd.header.Document Bulder Properties</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_1552d84fdbcd001033995886dc9619c4</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-15 13:03:19</sys_updated_on>
+    </sys_properties_category_m2m>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
+        <file_path/>
+        <instance_id>b82d00e1db6f7644ff27d5b0cf96196c</instance_id>
+        <instance_name>businessnowsvsdemo3</instance_name>
+        <name>sys_properties_category_m2m_1552d84fdbcd001033995886dc9619c4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m"><sys_properties_category_m2m action="INSERT_OR_UPDATE"><category display_value="Document Bulder Properties">f511900fdbcd001033995886dc9619dd</category><order>3</order><property display_value="x_buno_doc.word.2nd.header" name="x_buno_doc.word.2nd.header">2d421c4fdbcd001033995886dc961923</property><sys_class_name>sys_properties_category_m2m</sys_class_name><sys_created_by>mla@businessnow.dk</sys_created_by><sys_created_on>2019-11-15 13:03:07</sys_created_on><sys_id>1552d84fdbcd001033995886dc9619c4</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_buno_doc.word.2nd.header.Document Bulder Properties</sys_name><sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package><sys_policy/><sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope><sys_update_name>sys_properties_category_m2m_1552d84fdbcd001033995886dc9619c4</sys_update_name><sys_updated_by>mla@businessnow.dk</sys_updated_by><sys_updated_on>2019-11-15 13:03:19</sys_updated_on></sys_properties_category_m2m></record_update>]]></payload>
+        <payload_hash>-1429571839</payload_hash>
+        <record_name>x_buno_doc.word.2nd.header.Document Bulder Properties</record_name>
+        <reverted_from/>
+        <source>c4538f36dbc9001033995886dc961960</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 13:03:19</sys_created_on>
+        <sys_id>5c62dc4fdbcd001033995886dc9619a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e6f292d0a0000001</sys_recorded_at>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-15 13:03:19</sys_updated_on>
+        <type>Category Property</type>
+        <update_guid>9462dc4ff2cd00101a181dcb595b08a0</update_guid>
+        <update_guid_history>9462dc4ff2cd00101a181dcb595b08a0:-1429571839,1d525c4fb6cd0010d5c46554e66d0a61:908699203</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-19 09:27:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties_category_m2m">sys_properties_category_m2m</sys_db_object>
+        <sys_id>0423967d0e844873802832c061527169</sys_id>
+        <sys_metadata>1552d84fdbcd001033995886dc9619c4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_buno_doc.word.2nd.header.Document Bulder Properties</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_scope_delete display_value="">25f41efe0f984d6895ad3fb4d47fd1c9</sys_scope_delete>
+        <sys_update_name>sys_properties_category_m2m_1552d84fdbcd001033995886dc9619c4</sys_update_name>
+        <sys_update_version display_value="sys_properties_category_m2m_1552d84fdbcd001033995886dc9619c4">5c62dc4fdbcd001033995886dc9619a0</sys_update_version>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-19 09:27:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

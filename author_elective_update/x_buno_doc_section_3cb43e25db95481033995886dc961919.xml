@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_section">
+    <x_buno_doc_section action="DELETE">
+        <active>true</active>
+        <order>2</order>
+        <section_headline>Working Hours</section_headline>
+        <sys_class_name>x_buno_doc_section</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-23 19:17:31</sys_created_on>
+        <sys_id>3cb43e25db95481033995886dc961919</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Working Hours</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>x_buno_doc_section_3cb43e25db95481033995886dc961919</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-03 10:45:13</sys_updated_on>
+        <template display_value="PDF Demo Template">6ac232e1db95481033995886dc9619d4</template>
+    </x_buno_doc_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
+        <file_path/>
+        <instance_id>b82d00e1db6f7644ff27d5b0cf96196c</instance_id>
+        <instance_name>businessnowsvsdemo3</instance_name>
+        <name>x_buno_doc_section_3cb43e25db95481033995886dc961919</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_section"><x_buno_doc_section action="INSERT_OR_UPDATE"><active>true</active><order>2</order><section_headline>Working Hours</section_headline><sys_class_name>x_buno_doc_section</sys_class_name><sys_created_by>mla@businessnow.dk</sys_created_by><sys_created_on>2019-11-23 19:17:31</sys_created_on><sys_id>3cb43e25db95481033995886dc961919</sys_id><sys_mod_count>4</sys_mod_count><sys_name>Working Hours</sys_name><sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package><sys_policy/><sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope><sys_update_name>x_buno_doc_section_3cb43e25db95481033995886dc961919</sys_update_name><sys_updated_by>mla@businessnow.dk</sys_updated_by><sys_updated_on>2019-12-03 10:45:13</sys_updated_on><template display_value="PDF Demo Template">6ac232e1db95481033995886dc9619d4</template></x_buno_doc_section></record_update>]]></payload>
+        <payload_hash>196303010</payload_hash>
+        <record_name>Working Hours</record_name>
+        <reverted_from/>
+        <source>21ce37abdb05c01033995886dc961925</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-03 10:45:13</sys_created_on>
+        <sys_id>346f5430dbe1c05033995886dc961940</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16ecb5d33640000001</sys_recorded_at>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-03 10:45:13</sys_updated_on>
+        <type>Section</type>
+        <update_guid>3c6f5430b6e1c0505af81721be99b43f</update_guid>
+        <update_guid_history>3c6f5430b6e1c0505af81721be99b43f:196303010,8c6f543074e1c050e2d24fcef5a61a3c:1602829936,7ab2489634d1c810785524b71144d06e:-395091856,f4b24896d4d1c810e1b698d24699ff00:-1331748119,b7b4be25ef9548108e0c2cae7a780408:727892375</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Working Hours">72b47319dbe5445033995886dc961922</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-05 15:34:18</sys_created_on>
+        <sys_db_object display_value="" name="x_buno_doc_section">x_buno_doc_section</sys_db_object>
+        <sys_id>1ba7f3053c5940128412c33f581f00b1</sys_id>
+        <sys_metadata>3cb43e25db95481033995886dc961919</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Working Hours</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_scope_delete display_value="">25f41efe0f984d6895ad3fb4d47fd1c9</sys_scope_delete>
+        <sys_update_name>x_buno_doc_section_3cb43e25db95481033995886dc961919</sys_update_name>
+        <sys_update_version display_value="x_buno_doc_section_3cb43e25db95481033995886dc961919">346f5430dbe1c05033995886dc961940</sys_update_version>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 15:34:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

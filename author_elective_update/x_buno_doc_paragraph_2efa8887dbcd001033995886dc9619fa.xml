@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_paragraph">
+    <x_buno_doc_paragraph action="DELETE">
+        <active>true</active>
+        <condition/>
+        <custom_html>true</custom_html>
+        <custom_numbering>false</custom_numbering>
+        <html_body><![CDATA[<p><strong>These variables cannot be found on the table and will be copied in like this:</strong> As of ${u_start_date}, you are employed by the Company as ${u_position}, Job Level ${u_job_level} in ${u_department}. Until further, you will report to the management of ${u_department}. ${template_script:demoScript} I'm using Custom HTML to make it possible to do my own styling in the template script.&nbsp;</p>]]></html_body>
+        <order>1</order>
+        <section display_value="This is seccond section">1bda4887dbcd001033995886dc961977</section>
+        <short_description>par - This is seccond section</short_description>
+        <sys_class_name>x_buno_doc_paragraph</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 12:32:20</sys_created_on>
+        <sys_id>2efa8887dbcd001033995886dc9619fa</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>par - This is seccond section</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>x_buno_doc_paragraph_2efa8887dbcd001033995886dc9619fa</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-03 10:37:37</sys_updated_on>
+        <table>incident</table>
+    </x_buno_doc_paragraph>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
+        <file_path/>
+        <instance_id>b82d00e1db6f7644ff27d5b0cf96196c</instance_id>
+        <instance_name>businessnowsvsdemo3</instance_name>
+        <name>x_buno_doc_paragraph_2efa8887dbcd001033995886dc9619fa</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_buno_doc_paragraph"&gt;&lt;x_buno_doc_paragraph action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;condition/&gt;&lt;custom_html&gt;true&lt;/custom_html&gt;&lt;custom_numbering&gt;false&lt;/custom_numbering&gt;&lt;html_body&gt;&lt;![CDATA[&lt;p&gt;&lt;strong&gt;These variables cannot be found on the table and will be copied in like this:&lt;/strong&gt; As of ${u_start_date}, you are employed by the Company as ${u_position}, Job Level ${u_job_level} in ${u_department}. Until further, you will report to the management of ${u_department}. ${template_script:demoScript} I'm using Custom HTML to make it possible to do my own styling in the template script.&amp;nbsp;&lt;/p&gt;]]&gt;&lt;/html_body&gt;&lt;order&gt;1&lt;/order&gt;&lt;section display_value="This is seccond section"&gt;1bda4887dbcd001033995886dc961977&lt;/section&gt;&lt;short_description&gt;par - This is seccond section&lt;/short_description&gt;&lt;sys_class_name&gt;x_buno_doc_paragraph&lt;/sys_class_name&gt;&lt;sys_created_by&gt;mla@businessnow.dk&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-11-15 12:32:20&lt;/sys_created_on&gt;&lt;sys_id&gt;2efa8887dbcd001033995886dc9619fa&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;par - This is seccond section&lt;/sys_name&gt;&lt;sys_package display_value="Document Builder" source="x_buno_doc"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Document Builder"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_scope&gt;&lt;sys_update_name&gt;x_buno_doc_paragraph_2efa8887dbcd001033995886dc9619fa&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mla@businessnow.dk&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-12-03 10:37:37&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;/x_buno_doc_paragraph&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-629868318</payload_hash>
+        <record_name>par - This is seccond section</record_name>
+        <reverted_from/>
+        <source>21ce37abdb05c01033995886dc961925</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-03 10:37:37</sys_created_on>
+        <sys_id>e1add8bcdba1c05033995886dc9619d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16ecb56405e0000001</sys_recorded_at>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-03 10:37:37</sys_updated_on>
+        <type>Paragraph</type>
+        <update_guid>a9ad18bccaa1c050f03eb3e1feabe2cd</update_guid>
+        <update_guid_history>a9ad18bccaa1c050f03eb3e1feabe2cd:-629868318,c0cca346f391c8109bb10105381eec07:1202470545,51082f029791c8106ed086a2edec6516:1533427295,9a4b8c87c3cd0010d4605201cade29d3:-896120273</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="par - This is seccond section">fd737f95dbe5445033995886dc961918</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-05 15:28:46</sys_created_on>
+        <sys_db_object display_value="" name="x_buno_doc_paragraph">x_buno_doc_paragraph</sys_db_object>
+        <sys_id>7460465e834e4bd88c9dee8c90d3f210</sys_id>
+        <sys_metadata>2efa8887dbcd001033995886dc9619fa</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>par - This is seccond section</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_scope_delete display_value="">25f41efe0f984d6895ad3fb4d47fd1c9</sys_scope_delete>
+        <sys_update_name>x_buno_doc_paragraph_2efa8887dbcd001033995886dc9619fa</sys_update_name>
+        <sys_update_version display_value="x_buno_doc_paragraph_2efa8887dbcd001033995886dc9619fa">e1add8bcdba1c05033995886dc9619d1</sys_update_version>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 15:28:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

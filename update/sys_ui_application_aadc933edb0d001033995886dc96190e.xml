@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application">
+    <sys_ui_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <hint/>
+        <name>Document Builder</name>
+        <order/>
+        <roles>x_buno_doc.admin,x_buno_doc.template_manager,x_buno_doc.template_worker</roles>
+        <sys_class_name>sys_ui_application</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 09:09:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>aadc933edb0d001033995886dc96190e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Document Builder</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_ui_application_aadc933edb0d001033995886dc96190e</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-15 09:09:28</sys_updated_on>
+    </sys_ui_application>
+</record_update>

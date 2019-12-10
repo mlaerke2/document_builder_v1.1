@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>ce434fb7db8dc01033995886dc96190f</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_buno_doc_template_headers"&gt;
+    &lt;x_buno_doc_template_headers action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;file_type&gt;pdf&lt;/file_type&gt;
+        &lt;footer_first_page/&gt;
+        &lt;footer_first_page_display&gt;&lt;![CDATA[BusinessNowVandtårnsvej 62A - 2860 Søborg - Denmark]]&gt;&lt;/footer_first_page_display&gt;
+        &lt;footer_second_page/&gt;
+        &lt;footer_second_page_display/&gt;
+        &lt;header_first_page/&gt;
+        &lt;header_first_page_display/&gt;
+        &lt;header_second_page/&gt;
+        &lt;header_second_page_display/&gt;
+        &lt;image_alignment&gt;0&lt;/image_alignment&gt;
+        &lt;pdf_footer&gt;BusinessNow - Vandtårnsvej 62A - 2860 Søborg&lt;/pdf_footer&gt;
+        &lt;sys_class_name&gt;x_buno_doc_template_headers&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;mla@businessnow.dk&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2019-11-18 09:51:39&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;ce434fb7db8dc01033995886dc96190f&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;26&lt;/sys_mod_count&gt;
+        &lt;sys_name/&gt;
+        &lt;sys_package display_value="Document Builder" source="x_buno_doc"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Document Builder"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;x_buno_doc_template_headers_ce434fb7db8dc01033995886dc96190f&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;mla@businessnow.dk&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2019-12-05 21:36:17&lt;/sys_updated_on&gt;
+    &lt;/x_buno_doc_template_headers&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-09 19:27:12</sys_created_on>
+        <sys_id>a5605d7edba9485033995886dc9619aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_metadata_link_a5605d7edba9485033995886dc9619aa</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-09 19:27:12</sys_updated_on>
+        <tablename>x_buno_doc_template_headers</tablename>
+    </sys_metadata_link>
+</record_update>

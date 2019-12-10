@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="DELETE">
+        <disabled>ignore</disabled>
+        <field>type</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 07:53:06</sys_created_on>
+        <sys_data_policy display_value="Sets the Type field to mandatory">b75b833edbc9001033995886dc9619a0</sys_data_policy>
+        <sys_id>486b833edbc9001033995886dc9619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>type</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_data_policy_rule_486b833edbc9001033995886dc9619a3</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-15 07:53:06</sys_updated_on>
+        <table>x_buno_doc_template</table>
+    </sys_data_policy_rule>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
+        <file_path/>
+        <instance_id>b82d00e1db6f7644ff27d5b0cf96196c</instance_id>
+        <instance_name>businessnowsvsdemo3</instance_name>
+        <name>sys_data_policy_rule_486b833edbc9001033995886dc9619a3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule"><sys_data_policy_rule action="INSERT_OR_UPDATE"><disabled>ignore</disabled><field>type</field><mandatory>true</mandatory><sys_class_name>sys_data_policy_rule</sys_class_name><sys_created_by>mla@businessnow.dk</sys_created_by><sys_created_on>2019-11-15 07:53:06</sys_created_on><sys_data_policy display_value="Sets the Type field to mandatory">b75b833edbc9001033995886dc9619a0</sys_data_policy><sys_id>486b833edbc9001033995886dc9619a3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>type</sys_name><sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package><sys_policy/><sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope><sys_update_name>sys_data_policy_rule_486b833edbc9001033995886dc9619a3</sys_update_name><sys_updated_by>mla@businessnow.dk</sys_updated_by><sys_updated_on>2019-11-15 07:53:06</sys_updated_on><table>x_buno_doc_template</table></sys_data_policy_rule></record_update>]]></payload>
+        <payload_hash>1563986812</payload_hash>
+        <record_name>type</record_name>
+        <reverted_from/>
+        <source>c4538f36dbc9001033995886dc961960</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 07:53:06</sys_created_on>
+        <sys_id>4c6b833edbc9001033995886dc9619a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e6e0d27f40000001</sys_recorded_at>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-15 07:53:06</sys_updated_on>
+        <type>Data Policy Rule</type>
+        <update_guid>846b833e0ec90010701ce4a764c7fea5</update_guid>
+        <update_guid_history>846b833e0ec90010701ce4a764c7fea5:1563986812</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-29 11:20:20</sys_created_on>
+        <sys_db_object display_value="" name="sys_data_policy_rule">sys_data_policy_rule</sys_db_object>
+        <sys_id>4ebed7f2844d4d3e91e9205e1fbef4c4</sys_id>
+        <sys_metadata>486b833edbc9001033995886dc9619a3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>type</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_scope_delete display_value="">25f41efe0f984d6895ad3fb4d47fd1c9</sys_scope_delete>
+        <sys_update_name>sys_data_policy_rule_486b833edbc9001033995886dc9619a3</sys_update_name>
+        <sys_update_version display_value="sys_data_policy_rule_486b833edbc9001033995886dc9619a3">4c6b833edbc9001033995886dc9619a5</sys_update_version>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-29 11:20:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

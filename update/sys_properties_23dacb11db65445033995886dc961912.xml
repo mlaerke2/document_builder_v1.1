@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices>Yes=true,No=false</choices>
+        <description>Use Document Types on Templates&lt;/br&gt;Toogle off to hide the possibility to seperate templates into document types. &lt;/br&gt;This kan be useful if you have more than one document template on the same table and want to be able to create a UI Action for each.</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_buno_doc.document.builder.document.type</name>
+        <read_roles>x_buno_doc.admin,x_buno_doc.template_manager,x_buno_doc.template_worker</read_roles>
+        <suffix>x_buno_doc.document.builder.document.type</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-05 12:35:12</sys_created_on>
+        <sys_id>23dacb11db65445033995886dc961912</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_buno_doc.document.builder.document.type</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_properties_23dacb11db65445033995886dc961912</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 13:08:35</sys_updated_on>
+        <type>choicelist</type>
+        <value>true</value>
+        <write_roles>x_buno_doc.admin</write_roles>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=23dacb11db65445033995886dc961912"/>
+</record_update>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="Template" max_length="40" name="x_buno_doc_template" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element dependent="table" dependent_on_field="table" label="Condition" max_length="4000" name="condition" type="conditions" use_dependent_field="true"/>
+        <element hint="Toogle on to refrain from using default Template Headers. Instead use custom headers or none (blank)" label="Custom Headers and Footers" max_length="40" name="custom_headers_and_footers" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="document" label="Document Type" max_length="40" name="document_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Document" sequence="1" value="document"/>
+                <element inactive_on_update="false" label="Contract" sequence="2" value="contract"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="File Name" max_length="40" name="file_name" type="string"/>
+        <element choice="3" default="word" label="File Type" max_length="40" name="file_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="PDF" value="pdf"/>
+                <element inactive_on_update="false" label="Word" value="word"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Footer First Page" max_length="6000" name="footer_first_page" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Footer Second Page" max_length="6000" name="footer_second_page" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Header First Page" max_length="6000" name="header_first_page" type="string"/>
+        <element attributes="encode_utf8=false" hint="Leave blank if no logo is wanted" label="Header Logo" max_length="32" name="header_logo" reference="db_image" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Header Second Page" max_length="6000" name="header_second_page" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" choice_field="image_alignment" choice_table="x_buno_doc_template_headers" default="0" label="Image Alignment" max_length="40" name="image_alignment" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="english" hint="Language is mainly used to format written dates correctly" label="Language" max_length="40" name="language" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Danish" value="danish"/>
+                <element inactive_on_update="false" label="English" value="english"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="PDF Footer" max_length="60" name="pdf_footer" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Short Description" max_length="150" name="short_description" type="string"/>
+        <element attributes="allow_public=true" label="Table" mandatory="true" max_length="80" name="table" type="table_name"/>
+        <element attributes="encode_utf8=false" label="Template Owner" mandatory="true" max_length="32" name="template_owner" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="template_owner"/>
+        </index>
+        <index name="index2">
+            <element name="header_logo"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="Section" max_length="40" name="x_buno_doc_section" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Exclude Headline From Document" max_length="40" name="exclude_headline" type="boolean"/>
+        <element label="Section Order" max_length="40" name="order" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Section Headline" mandatory="true" max_length="150" name="section_headline" type="string"/>
+        <element attributes="encode_utf8=false" label="Template" max_length="32" name="template" reference="x_buno_doc_template" type="reference"/>
+        <index name="index">
+            <element name="template"/>
+        </index>
+    </element>
+</database>

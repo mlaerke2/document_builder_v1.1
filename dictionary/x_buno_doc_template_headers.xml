@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="Template Headers" max_length="40" name="x_buno_doc_template_headers" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" choice_field="file_type" choice_table="x_buno_doc_template" default="word" label="File Type" max_length="40" name="file_type" type="choice">
+            <choice/>
+        </element>
+        <element label="Footer First Page" max_length="6000" name="footer_first_page" type="string"/>
+        <element label="Footer First Page Display" max_length="65536" name="footer_first_page_display" read_only="true" type="html"/>
+        <element label="Footer Second Page" max_length="6000" name="footer_second_page" type="string"/>
+        <element label="Footer Second Page Display" max_length="65536" name="footer_second_page_display" read_only="true" type="html"/>
+        <element label="Header First Page" max_length="6000" name="header_first_page" type="string"/>
+        <element label="Header First Page Display" max_length="65536" name="header_first_page_display" read_only="true" type="html"/>
+        <element label="Header Second Page" max_length="6000" name="header_second_page" type="string"/>
+        <element label="Header Second Page Display" max_length="65536" name="header_second_page_display" read_only="true" type="html"/>
+        <element choice="3" default="0" label="Image Alignment" max_length="40" name="image_alignment" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Left" sequence="0" value="0"/>
+                <element inactive_on_update="false" label="Center" sequence="1" value="1"/>
+                <element inactive_on_update="false" label="Right" sequence="2" value="2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="PDF Footer" max_length="60" name="pdf_footer" type="string"/>
+    </element>
+</database>

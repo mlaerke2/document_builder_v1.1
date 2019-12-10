@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_paragraph">
+    <x_buno_doc_paragraph action="DELETE">
+        <active>true</active>
+        <condition/>
+        <custom_html>false</custom_html>
+        <custom_numbering>false</custom_numbering>
+        <html_body><![CDATA[<p><strong>These are found on the tabel:</strong> As of ${sys_created_on} until ${sys_updated_on}, you are employed by the Company as ${number}, Job Level ${priority} in ${short_description}. Until further, you will report to the management of ${assigned_to}.</p>]]></html_body>
+        <order>2</order>
+        <section display_value="This is seccond section">1bda4887dbcd001033995886dc961977</section>
+        <short_description>par - This is seccond section 2</short_description>
+        <sys_class_name>x_buno_doc_paragraph</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 12:32:59</sys_created_on>
+        <sys_id>dc6b00c7dbcd001033995886dc9619b5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>par - This is seccond section 2</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>x_buno_doc_paragraph_dc6b00c7dbcd001033995886dc9619b5</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-03 10:39:37</sys_updated_on>
+        <table>incident</table>
+    </x_buno_doc_paragraph>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
+        <file_path/>
+        <instance_id>b82d00e1db6f7644ff27d5b0cf96196c</instance_id>
+        <instance_name>businessnowsvsdemo3</instance_name>
+        <name>x_buno_doc_paragraph_dc6b00c7dbcd001033995886dc9619b5</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_buno_doc_paragraph"&gt;&lt;x_buno_doc_paragraph action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;condition/&gt;&lt;custom_html&gt;false&lt;/custom_html&gt;&lt;custom_numbering&gt;false&lt;/custom_numbering&gt;&lt;html_body&gt;&lt;![CDATA[&lt;p&gt;&lt;strong&gt;These are found on the tabel:&lt;/strong&gt; As of ${sys_created_on} until ${sys_updated_on}, you are employed by the Company as ${number}, Job Level ${priority} in ${short_description}. Until further, you will report to the management of ${assigned_to}.&lt;/p&gt;]]&gt;&lt;/html_body&gt;&lt;order&gt;2&lt;/order&gt;&lt;section display_value="This is seccond section"&gt;1bda4887dbcd001033995886dc961977&lt;/section&gt;&lt;short_description&gt;par - This is seccond section 2&lt;/short_description&gt;&lt;sys_class_name&gt;x_buno_doc_paragraph&lt;/sys_class_name&gt;&lt;sys_created_by&gt;mla@businessnow.dk&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-11-15 12:32:59&lt;/sys_created_on&gt;&lt;sys_id&gt;dc6b00c7dbcd001033995886dc9619b5&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;par - This is seccond section 2&lt;/sys_name&gt;&lt;sys_package display_value="Document Builder" source="x_buno_doc"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Document Builder"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_scope&gt;&lt;sys_update_name&gt;x_buno_doc_paragraph_dc6b00c7dbcd001033995886dc9619b5&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mla@businessnow.dk&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-12-03 10:39:37&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;/x_buno_doc_paragraph&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>535213083</payload_hash>
+        <record_name>par - This is seccond section 2</record_name>
+        <reverted_from/>
+        <source>21ce37abdb05c01033995886dc961925</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-03 10:39:37</sys_created_on>
+        <sys_id>b61e5cbcdba1c05033995886dc961980</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16ecb58149a0000001</sys_recorded_at>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-03 10:39:37</sys_updated_on>
+        <type>Paragraph</type>
+        <update_guid>fe1e5cbc75a1c050126ec08cb2a47d7f</update_guid>
+        <update_guid_history>fe1e5cbc75a1c050126ec08cb2a47d7f:535213083,c00c48c76fcd001041a016361ae5f4c3:-871549457,9bfb48c765cd0010b5dfc55687e01500:1021421719,68fb08c7a5cd00105a32ad777c533df9:1165424213,7f6b00c73dcd00106f3c18d5587555db:-1102024535</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="par - This is seccond section 2">b1737f95dbe5445033995886dc96191c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-05 15:28:46</sys_created_on>
+        <sys_db_object display_value="" name="x_buno_doc_paragraph">x_buno_doc_paragraph</sys_db_object>
+        <sys_id>0dadff3d301740f0a9d22e73a7ac8100</sys_id>
+        <sys_metadata>dc6b00c7dbcd001033995886dc9619b5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>par - This is seccond section 2</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_scope_delete display_value="">25f41efe0f984d6895ad3fb4d47fd1c9</sys_scope_delete>
+        <sys_update_name>x_buno_doc_paragraph_dc6b00c7dbcd001033995886dc9619b5</sys_update_name>
+        <sys_update_version display_value="x_buno_doc_paragraph_dc6b00c7dbcd001033995886dc9619b5">b61e5cbcdba1c05033995886dc961980</sys_update_version>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 15:28:46</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

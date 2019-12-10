@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="DELETE">
+        <choices/>
+        <description>Word 1st Header</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_buno_doc.word.1st.header</name>
+        <read_roles/>
+        <suffix>x_buno_doc.word.1st.header</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 13:02:14</sys_created_on>
+        <sys_id>78129c0fdbcd001033995886dc961993</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>x_buno_doc.word.1st.header</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_properties_78129c0fdbcd001033995886dc961993</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-15 14:13:49</sys_updated_on>
+        <type>string</type>
+        <value>&lt;div style="mso-element:header" id=fh1&gt;&lt;span lang=EN-US style="mso-ansi-language:EN-US"&gt;${base64EncodedLogo}&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/div&gt;</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=78129c0fdbcd001033995886dc961993"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
+        <file_path/>
+        <instance_id>b82d00e1db6f7644ff27d5b0cf96196c</instance_id>
+        <instance_name>businessnowsvsdemo3</instance_name>
+        <name>sys_properties_78129c0fdbcd001033995886dc961993</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Word 1st Header</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>x_buno_doc.word.1st.header</name><read_roles/><suffix>x_buno_doc.word.1st.header</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>mla@businessnow.dk</sys_created_by><sys_created_on>2019-11-15 13:02:14</sys_created_on><sys_id>78129c0fdbcd001033995886dc961993</sys_id><sys_mod_count>3</sys_mod_count><sys_name>x_buno_doc.word.1st.header</sys_name><sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package><sys_policy/><sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope><sys_update_name>sys_properties_78129c0fdbcd001033995886dc961993</sys_update_name><sys_updated_by>mla@businessnow.dk</sys_updated_by><sys_updated_on>2019-11-15 14:13:49</sys_updated_on><type>string</type><value>&lt;div style="mso-element:header" id=fh1&gt;&lt;span lang=EN-US style="mso-ansi-language:EN-US"&gt;${base64EncodedLogo}&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/div&gt;</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=78129c0fdbcd001033995886dc961993"/></record_update>]]></payload>
+        <payload_hash>-1460302079</payload_hash>
+        <record_name>x_buno_doc.word.1st.header</record_name>
+        <reverted_from/>
+        <source>c4538f36dbc9001033995886dc961960</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 14:13:49</sys_created_on>
+        <sys_id>cd82684fdb01401033995886dc961903</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e6f69b8ea0000001</sys_recorded_at>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-15 14:13:49</sys_updated_on>
+        <type>System Property</type>
+        <update_guid>4982684fd601401047c1c5fa555bb503</update_guid>
+        <update_guid_history>4982684fd601401047c1c5fa555bb503:-1460302079,d5eb9cc77e0140107d65b976fd2c27bb:972739767,9a9698836f014010562edc5dd958112e:-1257274445,b822544f7ecd0010a253b4bd274aa641:1197393941</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-19 09:27:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties">sys_properties</sys_db_object>
+        <sys_id>20ca78ace48b4736a374853cd327cb31</sys_id>
+        <sys_metadata>78129c0fdbcd001033995886dc961993</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_buno_doc.word.1st.header</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_scope_delete display_value="">25f41efe0f984d6895ad3fb4d47fd1c9</sys_scope_delete>
+        <sys_update_name>sys_properties_78129c0fdbcd001033995886dc961993</sys_update_name>
+        <sys_update_version display_value="sys_properties_78129c0fdbcd001033995886dc961993">cd82684fdb01401033995886dc961903</sys_update_version>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-19 09:27:10</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

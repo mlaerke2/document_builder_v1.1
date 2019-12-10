@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-18 09:14:15</sys_created_on>
+        <sys_id>4aba76bfdb4dc01033995886dc96196e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_buno_doc_template_headers.x_buno_doc.template_manager</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_security_acl display_value="x_buno_doc_template_headers">46ba76bfdb4dc01033995886dc96196a</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_4aba76bfdb4dc01033995886dc96196e</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-18 09:14:15</sys_updated_on>
+        <sys_user_role display_value="x_buno_doc.template_manager" name="x_buno_doc.template_manager">4c254bf2dbc9001033995886dc96190b</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

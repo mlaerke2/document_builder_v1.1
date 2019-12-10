@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>db_create_document_task</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>new x_buno_doc.DocumentBuilderUtil().uiCondition(current.sys_class_name, 'document', current.sys_id);</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Create Document</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[//if username is not empty send the field name. Else use opened_by. 
+var userField = !gs.nil(current.getValue('caller_id')) ? 'caller_id' : 'opened_by';//you can also send a name in string, like this: "Mikkel Laerke Alimooti"
+var testFullDocument = false;
+var documentType = 'document';//standard type
+
+//The DocumentBuilder needs to be initiated with the following parameters:
+//table                                  current table
+//record_sys_id                          current sys_id
+//document_type                          the kind of document that should be build (contract, document, addendum etc.)
+//user_reference_field OR user name      field name containing a reference to sys_user (i.e. caller_id) or the users name in string value
+//testFullDocument                       true/false (if true prints the full document for debugging purpose)
+
+var wordG = new x_buno_doc.DocumentBuilder(current.sys_class_name, current.sys_id, documentType, userField, testFullDocument);
+//createAttachment(fileType)--pdf, word or empty
+wordG.createAttachment();//blank means that any filetype found is created (PDF or Word)
+action.setRedirectURL(current);]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 10:00:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d138a7f6db4d001033995886dc9619c6</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Create Document</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_ui_action_d138a7f6db4d001033995886dc9619c6</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 13:14:26</sys_updated_on>
+        <table>task</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

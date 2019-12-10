@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="DELETE">
+        <choices/>
+        <description>Word Footer 1st Page</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_buno_doc.word.1st.footer</name>
+        <read_roles/>
+        <suffix>x_buno_doc.word.1st.footer</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 13:02:37</sys_created_on>
+        <sys_id>bf22184fdbcd001033995886dc9619f6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_buno_doc.word.1st.footer</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_properties_bf22184fdbcd001033995886dc9619f6</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-15 13:22:32</sys_updated_on>
+        <type>string</type>
+        <value>&lt;div style="mso-element:footer" id=ff1&gt;&lt;p class="MsoFooter" align="center" style="text-align:center"&gt;&lt;span style="font-size:7.0pt;font-family:Verdana,sans-serif"&gt;&lt;strong&gt;Maersk Drilling A/S &lt;/strong&gt;&lt;br/&gt; Lyngby Hovedgade 85 &amp;#8211; 2800 Kgs Lyngby &amp;#8211; Danmark &lt;br/&gt; Telefon: 6336 0000 &lt;br/&gt; www.maerskdrilling.com &lt;br/&gt; CVR no 32 67 38 21&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=bf22184fdbcd001033995886dc9619f6"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
+        <file_path/>
+        <instance_id>b82d00e1db6f7644ff27d5b0cf96196c</instance_id>
+        <instance_name>businessnowsvsdemo3</instance_name>
+        <name>sys_properties_bf22184fdbcd001033995886dc9619f6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Word Footer 1st Page</description><ignore_cache>false</ignore_cache><is_private>false</is_private><name>x_buno_doc.word.1st.footer</name><read_roles/><suffix>x_buno_doc.word.1st.footer</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>mla@businessnow.dk</sys_created_by><sys_created_on>2019-11-15 13:02:37</sys_created_on><sys_id>bf22184fdbcd001033995886dc9619f6</sys_id><sys_mod_count>2</sys_mod_count><sys_name>x_buno_doc.word.1st.footer</sys_name><sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package><sys_policy/><sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope><sys_update_name>sys_properties_bf22184fdbcd001033995886dc9619f6</sys_update_name><sys_updated_by>mla@businessnow.dk</sys_updated_by><sys_updated_on>2019-11-15 13:22:32</sys_updated_on><type>string</type><value>&lt;div style="mso-element:footer" id=ff1&gt;&lt;p class="MsoFooter" align="center" style="text-align:center"&gt;&lt;span style="font-size:7.0pt;font-family:Verdana,sans-serif"&gt;&lt;strong&gt;Maersk Drilling A/S &lt;/strong&gt;&lt;br/&gt; Lyngby Hovedgade 85 &amp;#8211; 2800 Kgs Lyngby &amp;#8211; Danmark &lt;br/&gt; Telefon: 6336 0000 &lt;br/&gt; www.maerskdrilling.com &lt;br/&gt; CVR no 32 67 38 21&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;</value><write_roles/></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=bf22184fdbcd001033995886dc9619f6"/></record_update>]]></payload>
+        <payload_hash>874649715</payload_hash>
+        <record_name>x_buno_doc.word.1st.footer</record_name>
+        <reverted_from/>
+        <source>c4538f36dbc9001033995886dc961960</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 13:22:34</sys_created_on>
+        <sys_id>82c650c3db01401033995886dc961940</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16e6f3aca610000001</sys_recorded_at>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-15 13:22:34</sys_updated_on>
+        <type>System Property</type>
+        <update_guid>c6c650c328014010d74c6859cb86763f</update_guid>
+        <update_guid_history>c6c650c328014010d74c6859cb86763f:874649715,0a6694836501401025712b23e688eaed:-540194675,9632584f1bcd0010a5e8d0aa551c1b66:-2085494721</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-19 09:27:18</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties">sys_properties</sys_db_object>
+        <sys_id>3c0e58cdc9d74d28a292b303e713e824</sys_id>
+        <sys_metadata>bf22184fdbcd001033995886dc9619f6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_buno_doc.word.1st.footer</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_scope_delete display_value="">25f41efe0f984d6895ad3fb4d47fd1c9</sys_scope_delete>
+        <sys_update_name>sys_properties_bf22184fdbcd001033995886dc9619f6</sys_update_name>
+        <sys_update_version display_value="sys_properties_bf22184fdbcd001033995886dc9619f6">82c650c3db01401033995886dc961940</sys_update_version>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-19 09:27:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

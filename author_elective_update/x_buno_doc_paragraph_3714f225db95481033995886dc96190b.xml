@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_paragraph">
+    <x_buno_doc_paragraph action="DELETE">
+        <active>true</active>
+        <condition/>
+        <custom_html>false</custom_html>
+        <custom_numbering>false</custom_numbering>
+        <html_body><![CDATA[<p>As of ${sys_created_on}, you are employed by the Company: ${caller_id.company}, Job Level ${priority} in ${caller_id.department}. Until further, you will report to the management.</p>]]></html_body>
+        <order>1</order>
+        <section display_value="Commencement and Position">5504f225db95481033995886dc9619be</section>
+        <short_description>par - Commencement and Position</short_description>
+        <sys_class_name>x_buno_doc_paragraph</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-23 19:15:14</sys_created_on>
+        <sys_id>3714f225db95481033995886dc96190b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>par - Commencement and Position</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>x_buno_doc_paragraph_3714f225db95481033995886dc96190b</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-03 10:44:35</sys_updated_on>
+        <table>incident</table>
+    </x_buno_doc_paragraph>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
+        <file_path/>
+        <instance_id>b82d00e1db6f7644ff27d5b0cf96196c</instance_id>
+        <instance_name>businessnowsvsdemo3</instance_name>
+        <name>x_buno_doc_paragraph_3714f225db95481033995886dc96190b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_buno_doc_paragraph"&gt;&lt;x_buno_doc_paragraph action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;condition/&gt;&lt;custom_html&gt;false&lt;/custom_html&gt;&lt;custom_numbering&gt;false&lt;/custom_numbering&gt;&lt;html_body&gt;&lt;![CDATA[&lt;p&gt;As of ${sys_created_on}, you are employed by the Company: ${caller_id.company}, Job Level ${priority} in ${caller_id.department}. Until further, you will report to the management.&lt;/p&gt;]]&gt;&lt;/html_body&gt;&lt;order&gt;1&lt;/order&gt;&lt;section display_value="Commencement and Position"&gt;5504f225db95481033995886dc9619be&lt;/section&gt;&lt;short_description&gt;par - Commencement and Position&lt;/short_description&gt;&lt;sys_class_name&gt;x_buno_doc_paragraph&lt;/sys_class_name&gt;&lt;sys_created_by&gt;mla@businessnow.dk&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-11-23 19:15:14&lt;/sys_created_on&gt;&lt;sys_id&gt;3714f225db95481033995886dc96190b&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;par - Commencement and Position&lt;/sys_name&gt;&lt;sys_package display_value="Document Builder" source="x_buno_doc"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Document Builder"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_scope&gt;&lt;sys_update_name&gt;x_buno_doc_paragraph_3714f225db95481033995886dc96190b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mla@businessnow.dk&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-12-03 10:44:35&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;/x_buno_doc_paragraph&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>353414692</payload_hash>
+        <record_name>par - Commencement and Position</record_name>
+        <reverted_from/>
+        <source>21ce37abdb05c01033995886dc961925</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-03 10:44:35</sys_created_on>
+        <sys_id>233f5030dbe1c05033995886dc9619e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16ecb5ca0f10000001</sys_recorded_at>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-03 10:44:35</sys_updated_on>
+        <type>Paragraph</type>
+        <update_guid>6b3f503035e1c050471fc6d1205ed2e6</update_guid>
+        <update_guid_history>6b3f503035e1c050471fc6d1205ed2e6:353414692,80a304d635d1c810bf50e60809d08b80:-1187154432,1a3476256f95481068641c4b1b872f82:1862969499</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="par - Commencement and Position">b6b47319dbe5445033995886dc961925</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-05 15:34:18</sys_created_on>
+        <sys_db_object display_value="" name="x_buno_doc_paragraph">x_buno_doc_paragraph</sys_db_object>
+        <sys_id>91889377fbef4ee79bbe8afdf8768d01</sys_id>
+        <sys_metadata>3714f225db95481033995886dc96190b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>par - Commencement and Position</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_scope_delete display_value="">25f41efe0f984d6895ad3fb4d47fd1c9</sys_scope_delete>
+        <sys_update_name>x_buno_doc_paragraph_3714f225db95481033995886dc96190b</sys_update_name>
+        <sys_update_version display_value="x_buno_doc_paragraph_3714f225db95481033995886dc96190b">233f5030dbe1c05033995886dc9619e7</sys_update_version>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 15:34:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

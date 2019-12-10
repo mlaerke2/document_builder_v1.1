@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices>Yes=true,No=false</choices>
+        <description>Allow PDF Templates&lt;/br&gt;Toogle off to hide the possibility to create PDF templates</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_buno_doc.document.builder.pdf.allowed</name>
+        <read_roles/>
+        <suffix>x_buno_doc.document.builder.pdf.allowed</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-26 09:08:11</sys_created_on>
+        <sys_id>fac58ce2db110c1033995886dc961975</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>x_buno_doc.document.builder.pdf.allowed</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_properties_fac58ce2db110c1033995886dc961975</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 13:08:35</sys_updated_on>
+        <type>choicelist</type>
+        <value>true</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=fac58ce2db110c1033995886dc961975"/>
+</record_update>

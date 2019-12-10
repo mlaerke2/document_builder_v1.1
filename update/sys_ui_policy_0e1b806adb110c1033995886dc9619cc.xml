@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions/>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>false</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+	var allowPDF = g_scratchpad.x_buno_doc_document_builder_pdf_allowed;
+	if (allowPDF == 'false') {
+
+		g_form.setReadOnly('file_type', true);
+	}
+	
+	var allowDocumentType = g_scratchpad.x_buno_doc_document_builder_document_type;
+	if (allowDocumentType == 'false') {
+
+		g_form.setReadOnly('document_type', true);
+	}
+}]]></script_true>
+        <set_values/>
+        <short_description>Set read only based on properties</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-26 09:30:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0e1b806adb110c1033995886dc9619cc</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Set read only based on properties</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_ui_policy_0e1b806adb110c1033995886dc9619cc</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 15:58:22</sys_updated_on>
+        <table>x_buno_doc_template</table>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

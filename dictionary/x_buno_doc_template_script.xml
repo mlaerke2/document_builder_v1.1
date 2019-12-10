@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="Template Script" max_length="40" name="x_buno_doc_template_script" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Description" max_length="4000" name="description" type="string"/>
+        <element display="true" label="Name" max_length="80" name="name" type="string"/>
+        <element default="(function templateFunction(current) {&#9;&#13;&#10;&#13;&#10;&#9;// &#9;Used by calling ${template_script:NAME_OF_THIS_SCRIPT}&#9;&#13;&#10;&#9;// &#9;Return the value that you want in you template.&#9;&#13;&#10;&#9;// &#9;Can be html formatted. &#13;&#10;&#9;// &#9;If no html is included it will be wrapped in a &lt;p&gt; tag&#13;&#10;&#9;// &#9;current: current source record object&#13;&#10;&#9;// &#9;template values can be utilized like this: var templateLanguage = template.getDisplayValue('language');&#13;&#10;&#13;&#10;&#13;&#10;&#9;var html = '';&#9;// Add your code here&#9;&#13;&#10;&#9;return html;&#13;&#10;&#13;&#10;})(current);" label="Script" max_length="4000" name="script" type="script"/>
+    </element>
+</database>

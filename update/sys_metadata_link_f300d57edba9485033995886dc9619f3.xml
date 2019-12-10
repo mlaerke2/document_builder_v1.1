@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>92571bf7dbcdc01033995886dc961978</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_section">
+    <x_buno_doc_section action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <exclude_headline>true</exclude_headline>
+        <order>0</order>
+        <section_headline>This PDF headline will not be shown </section_headline>
+        <sys_class_name>x_buno_doc_section</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-18 11:19:33</sys_created_on>
+        <sys_id>92571bf7dbcdc01033995886dc961978</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>This PDF headline will not be shown </sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>x_buno_doc_section_92571bf7dbcdc01033995886dc961978</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 20:38:40</sys_updated_on>
+        <template display_value="Headers Test PDF">91571bf7dbcdc01033995886dc961973</template>
+    </x_buno_doc_section>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-09 19:25:43</sys_created_on>
+        <sys_id>f300d57edba9485033995886dc9619f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>This PDF headline will not be shown </sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_metadata_link_f300d57edba9485033995886dc9619f3</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-09 19:25:43</sys_updated_on>
+        <tablename>x_buno_doc_section</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>42100ff3db8dc01033995886dc961951</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_buno_doc_template_headers"&gt;
+    &lt;x_buno_doc_template_headers action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;file_type&gt;word&lt;/file_type&gt;
+        &lt;footer_first_page&gt;&amp;lt;p align="center" style="text-align:center"&amp;gt;&amp;lt;span style="font-size:7.0pt;font-family:Verdana,sans-serif"&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;strong&amp;gt;BusinessNow&amp;lt;/strong&amp;gt;&amp;lt;br/&amp;gt;Vandtårnsvej 62A &amp;amp;#8211; 2860 Søborg &amp;amp;#8211; Denmark &amp;lt;br/&amp;gt;Phone: +45 70 230 231 &amp;lt;br/&amp;gt;businessnow.dk&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt; &amp;#13;
+&lt;/footer_first_page&gt;
+        &lt;footer_first_page_display&gt;&lt;![CDATA[&lt;p align="center" style="text-align:center"&gt;&lt;span style="font-size:7.0pt;font-family:Verdana,sans-serif"&gt;&lt;br /&gt;&lt;strong&gt;BusinessNow&lt;/strong&gt;&lt;br /&gt;Vandtårnsvej 62A – 2860 Søborg – Denmark &lt;br /&gt;Phone: &amp;#43;45 70 230 231 &lt;br /&gt;businessnow.dk&lt;/span&gt;&lt;/p&gt; ]]&gt;&lt;/footer_first_page_display&gt;
+        &lt;footer_second_page&gt;&amp;lt;p align="center" style="text-align:center"&amp;gt;&amp;lt;span style="font-size:7.0pt;font-family:Verdana,sans-serif"&amp;gt;&amp;lt;br/&amp;gt;&amp;lt;strong&amp;gt;BusinessNow&amp;lt;/strong&amp;gt;&amp;lt;br/&amp;gt;Vandtårnsvej 62A &amp;amp;#8211; 2860 Søborg &amp;amp;#8211; Denmark &amp;lt;br/&amp;gt;Phone: +45 70 230 231 &amp;lt;br/&amp;gt;businessnow.dk&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&lt;/footer_second_page&gt;
+        &lt;footer_second_page_display&gt;&lt;![CDATA[&lt;p align="center" style="text-align:center"&gt;&lt;span style="font-size:7.0pt;font-family:Verdana,sans-serif"&gt;&lt;br /&gt;&lt;strong&gt;BusinessNow&lt;/strong&gt;&lt;br /&gt;Vandtårnsvej 62A – 2860 Søborg – Denmark &lt;br /&gt;Phone: &amp;#43;45 70 230 231 &lt;br /&gt;businessnow.dk&lt;/span&gt;&lt;/p&gt;]]&gt;&lt;/footer_second_page_display&gt;
+        &lt;header_first_page&gt;&amp;lt;span lang=EN-US style="mso-ansi-language:EN-US"&amp;gt;${headerLogo}&amp;lt;o:p&amp;gt;&amp;lt;/o:p&amp;gt;&amp;lt;/span&amp;gt;&lt;/header_first_page&gt;
+        &lt;header_first_page_display&gt;&lt;![CDATA[&lt;span lang="EN-US" style="mso-ansi-language:EN-US"&gt;${headerLogo}&lt;/span&gt;]]&gt;&lt;/header_first_page_display&gt;
+        &lt;header_second_page&gt;&amp;lt;p class="MsoHeader" align="center" style="font-size:9.0pt; font-family:Verdana,sans-serif; margin:0cm;"&amp;gt;-${pageNumber}-&amp;lt;/p&amp;gt;&amp;#13;
+&amp;lt;p class="MsoNormal" align="center" style="margin-top:0cm;font-size:9.0pt; font-family:Verdana,sans-serif; border-bottom: 1px solid black;"&amp;gt;${usersName}  -  ${writtenDate}&amp;lt;br style="mso-special-character:line-break"&amp;gt;&amp;lt;/p&amp;gt;&lt;/header_second_page&gt;
+        &lt;header_second_page_display&gt;&lt;![CDATA[&lt;p class="MsoHeader" align="center" style="font-size:9.0pt; font-family:Verdana,sans-serif; margin:0cm;"&gt;-${pageNumber}-&lt;/p&gt;&lt;p class="MsoNormal" align="center" style="margin-top:0cm;font-size:9.0pt; font-family:Verdana,sans-serif; border-bottom: 1px solid black;"&gt;${usersName}  -  ${writtenDate}&lt;br style="mso-special-character:line-break" /&gt;&lt;/p&gt;]]&gt;&lt;/header_second_page_display&gt;
+        &lt;image_alignment&gt;0&lt;/image_alignment&gt;
+        &lt;pdf_footer/&gt;
+        &lt;sys_class_name&gt;x_buno_doc_template_headers&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;mla@businessnow.dk&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2019-11-18 09:38:34&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;42100ff3db8dc01033995886dc961951&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;18&lt;/sys_mod_count&gt;
+        &lt;sys_name/&gt;
+        &lt;sys_package display_value="Document Builder" source="x_buno_doc"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Document Builder"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;x_buno_doc_template_headers_42100ff3db8dc01033995886dc961951&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;mla@businessnow.dk&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2019-12-05 22:00:42&lt;/sys_updated_on&gt;
+    &lt;/x_buno_doc_template_headers&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-09 19:27:12</sys_created_on>
+        <sys_id>e9605d7edba9485033995886dc9619a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_metadata_link_e9605d7edba9485033995886dc9619a8</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-09 19:27:12</sys_updated_on>
+        <tablename>x_buno_doc_template_headers</tablename>
+    </sys_metadata_link>
+</record_update>

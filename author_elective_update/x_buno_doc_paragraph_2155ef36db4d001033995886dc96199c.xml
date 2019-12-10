@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_paragraph">
+    <x_buno_doc_paragraph action="DELETE">
+        <active>true</active>
+        <condition/>
+        <custom_html>true</custom_html>
+        <custom_numbering>true</custom_numbering>
+        <html_body><![CDATA[<h2 align="center"><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp;</span></h2>
+<h2 align="center"><span style="font-family: verdana, geneva; font-size: 10pt;"><strong>Employment Contract</strong></span></h2>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">&nbsp;</span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">Between&nbsp;</span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">BusinessNow</span><br /><span style="font-family: verdana, geneva; font-size: 10pt;">Vandt&aring;rnsvej 62A</span><br /><span style="font-family: verdana, geneva; font-size: 10pt;">2860 S&oslash;borg</span><br /><span style="font-family: verdana, geneva; font-size: 10pt;">(&rdquo;The Company&rdquo;)</span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">and</span></p>
+<p><span style="font-family: verdana, geneva; font-size: 10pt;">${caller_id}</span></p>]]></html_body>
+        <order>1</order>
+        <section display_value="Intro">10c42736db4d001033995886dc9619e8</section>
+        <short_description>par - Intro</short_description>
+        <sys_class_name>x_buno_doc_paragraph</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 09:47:11</sys_created_on>
+        <sys_id>2155ef36db4d001033995886dc96199c</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>par - Intro</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>x_buno_doc_paragraph_2155ef36db4d001033995886dc96199c</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-03 10:36:20</sys_updated_on>
+        <table>incident</table>
+    </x_buno_doc_paragraph>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
+        <file_path/>
+        <instance_id>b82d00e1db6f7644ff27d5b0cf96196c</instance_id>
+        <instance_name>businessnowsvsdemo3</instance_name>
+        <name>x_buno_doc_paragraph_2155ef36db4d001033995886dc96199c</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_buno_doc_paragraph"&gt;&lt;x_buno_doc_paragraph action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;condition/&gt;&lt;custom_html&gt;true&lt;/custom_html&gt;&lt;custom_numbering&gt;true&lt;/custom_numbering&gt;&lt;html_body&gt;&lt;![CDATA[&lt;h2 align="center"&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/h2&gt;
+&lt;h2 align="center"&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;&lt;strong&gt;Employment Contract&lt;/strong&gt;&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;Between&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;BusinessNow&lt;/span&gt;&lt;br /&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;Vandt&amp;aring;rnsvej 62A&lt;/span&gt;&lt;br /&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;2860 S&amp;oslash;borg&lt;/span&gt;&lt;br /&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;(&amp;rdquo;The Company&amp;rdquo;)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;and&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: verdana, geneva; font-size: 10pt;"&gt;${caller_id}&lt;/span&gt;&lt;/p&gt;]]&gt;&lt;/html_body&gt;&lt;order&gt;1&lt;/order&gt;&lt;section display_value="Intro"&gt;10c42736db4d001033995886dc9619e8&lt;/section&gt;&lt;short_description&gt;par - Intro&lt;/short_description&gt;&lt;sys_class_name&gt;x_buno_doc_paragraph&lt;/sys_class_name&gt;&lt;sys_created_by&gt;mla@businessnow.dk&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2019-11-15 09:47:11&lt;/sys_created_on&gt;&lt;sys_id&gt;2155ef36db4d001033995886dc96199c&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;par - Intro&lt;/sys_name&gt;&lt;sys_package display_value="Document Builder" source="x_buno_doc"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Document Builder"&gt;c0538f36dbc9001033995886dc96195e&lt;/sys_scope&gt;&lt;sys_update_name&gt;x_buno_doc_paragraph_2155ef36db4d001033995886dc96199c&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;mla@businessnow.dk&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2019-12-03 10:36:20&lt;/sys_updated_on&gt;&lt;table&gt;incident&lt;/table&gt;&lt;/x_buno_doc_paragraph&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1146704266</payload_hash>
+        <record_name>par - Intro</record_name>
+        <reverted_from/>
+        <source>21ce37abdb05c01033995886dc961925</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-03 10:36:21</sys_created_on>
+        <sys_id>7a5d94bcdba1c05033995886dc96195a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16ecb5514a50000001</sys_recorded_at>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-03 10:36:21</sys_updated_on>
+        <type>Paragraph</type>
+        <update_guid>b25d94bc42a1c0504365fa128d16435a</update_guid>
+        <update_guid_history>b25d94bc42a1c0504365fa128d16435a:-1146704266,3a7f420f66118c10e8d79bc8ff69a748:-1390092974,b1ae4acba2118c1051d9c720c79261d9:625442962,631e4acb32118c1060a8099e266cb86c:-1909115050,4407fb7618594c10fa046592e162b532:811986245,c73a88472ecd0010fa2868e7087fb732:-1516532300,87756376194d0010b7307aeefed00b7c:-258144245</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="par - Intro">21733f95dbe5445033995886dc9619ec</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-05 15:28:45</sys_created_on>
+        <sys_db_object display_value="" name="x_buno_doc_paragraph">x_buno_doc_paragraph</sys_db_object>
+        <sys_id>3a5e62d994fd45d09d4ec83ccacef900</sys_id>
+        <sys_metadata>2155ef36db4d001033995886dc96199c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>par - Intro</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_scope_delete display_value="">25f41efe0f984d6895ad3fb4d47fd1c9</sys_scope_delete>
+        <sys_update_name>x_buno_doc_paragraph_2155ef36db4d001033995886dc96199c</sys_update_name>
+        <sys_update_version display_value="x_buno_doc_paragraph_2155ef36db4d001033995886dc96199c">7a5d94bcdba1c05033995886dc96195a</sys_update_version>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 15:28:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

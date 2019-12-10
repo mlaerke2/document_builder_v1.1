@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_buno_doc.DocumentBuilderUtil</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description>Utility script for Document Builder. &#13;
+This can be called client side and serverside. </description>
+        <name>DocumentBuilderUtil</name>
+        <script><![CDATA[var DocumentBuilderUtil = Class.create();
+DocumentBuilderUtil.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	TEMPLATE_TABLE: 'x_buno_doc_template',
+	SECTION_TABLE: 'x_buno_doc_section',
+	PARAGRAPH_TABLE: 'x_buno_doc_paragraph',
+	TEMPLATE_SECTION_REL_TABLE: 'x_buno_doc_m2m_sections_templates',
+	LOG: new global.GSLog('x_buno_doc.document.builder.log.level', 'DocumentBuilderUtil'),
+	USE_DOCUMENT_TYPE: gs.getProperty('x_buno_doc.document.builder.document.type'),
+	
+	
+	
+	
+
+	getParagraphNumber: function(){
+
+		try{
+
+			this.LOG.logDebug('Starting getParagraphNumber');
+			var table = '';
+
+			// Get parent Section
+			var section = this.getParameter('sysparm_section');
+
+			var sectionGR = new GlideRecord(this.SECTION_TABLE);
+			if (sectionGR.get(section)) {
+
+				if (!gs.nil(sectionGR.template.table)) {
+
+					table = sectionGR.template.table.toString();
+				}
+			}
+			this.LOG.logDebug('sectionGR: ' + sectionGR.section_headline);
+
+			/*
+		//if an M2M relationship is used between template and section:
+
+		//get table info from Template
+		var table = '';
+		var relGR = new GlideRecord(this.TEMPLATE_SECTION_REL_TABLE);
+		relGR.addQuery('section', section);
+		relGR.query();
+		if (relGR.next()) {
+
+			if (!gs.nil(relGR.template.table)) {
+
+				table = relGR.template.table.toString();
+			}
+		}		*/
+
+			if (gs.nil(table)) {
+				//Exit if nothins was found
+				this.LOG.logError('Table missing on Template: ' + relGR.template);
+				return;
+			}
+
+			//create standard return object
+			var returnObj = {
+				orderNumber: 1,
+				table: table,
+				description: 'par - ' + sectionGR.section_headline,
+				exclude_section_headline: sectionGR.getValue('exclude_headline')
+			};
+
+			//Search for existing paragraphs from same section to get correct order.
+			var paragraph = new GlideRecord(this.PARAGRAPH_TABLE);
+			paragraph.addQuery("section", section);
+			paragraph.orderByDesc('order');
+			//paragraph.addActiveQuery(); removed - it's okay to number after inactive paragraphs. They could be activated later on
+			paragraph.addNotNullQuery('order');
+			paragraph.setLimit(1);
+			paragraph.query();
+			if (paragraph.next()) {
+
+				var nextNumber = parseInt(paragraph.order) + 1;
+				returnObj.orderNumber = nextNumber;
+				returnObj.description = returnObj.description + ' ' + nextNumber;
+
+			}
+
+			var returnObjString = JSON.stringify(returnObj);
+			this.LOG.logDebug('returning getParagraphNumber \nValue:' + returnObjString);
+			return returnObjString;
+
+		} catch (error) {
+
+			this.LOG.logError('getParagraphNumber failed: ' + error);
+		}
+
+	},
+
+	
+	
+	
+	
+	
+
+	getSectionOrder: function(){
+
+		try{
+
+
+			this.LOG.logDebug('Starting getSectionOrder');
+
+			var returnObj = {
+				orderNumber: 1,
+			};
+
+			var template = this.getParameter('sysparm_template');
+
+			var section = new GlideRecord(this.SECTION_TABLE);
+			section.addQuery("template", template);
+			section.addNotNullQuery('order');
+			section.orderByDesc('order');
+			section.setLimit(1);
+			section.query();
+			if (section.next()) {
+
+				var nextNumber = parseInt(section.order) + 1;
+				returnObj.orderNumber = nextNumber;
+			}
+
+			var returnObjString = JSON.stringify(returnObj);
+			this.LOG.logDebug('returning getSectionOrder \nValue:' + returnObjString);
+			return returnObjString;
+
+		}catch(error){
+
+			this.LOG.logError('getSectionOrder failed: ' + error);
+
+		}
+	},
+	
+	
+	
+	
+	
+
+	uiCondition: function(table, documentType, sysID){
+
+		try{
+			this.LOG.logDebug('Starting uiCondition \nTable: ' + table + '\nDocument Type: ' + documentType + '\nsysID: ' + sysID);
+
+			var template = new GlideRecord(this.TEMPLATE_TABLE);
+			var tableQuery = template.addQuery('table', table);
+			if(documentType != '*' && this.USE_DOCUMENT_TYPE) //filter out type for test button
+				template.addQuery('document_type', documentType);
+			template.orderByDesc('sys_created_on');
+			template.addActiveQuery();
+			template.query();
+			while (template.next()) {
+
+				var condition = template.getValue('condition');
+				var conditionMet = this.checkCondition(condition, table, sysID);
+
+				if(!conditionMet){
+
+					if(!template.hasNext()){
+
+						this.LOG.logDebug('Returning uiCondition \nTable: ' + table + '\nDocument Type: ' + documentType + '\nsysID: ' + sysID + '\nValue: ' + false);
+						return false;
+					}
+					continue;
+
+				}else{
+					this.LOG.logDebug('Returning uiCondition \nTable: ' + table + '\nDocument Type: ' + documentType + '\nsysID: ' + sysID + '\nValue: ' + true);
+					return true;
+
+				}
+			}
+		} catch (error) {
+
+			this.LOG.logError('uiCondition failed: ' + error);
+		}
+	},
+	
+	
+	
+	
+	
+	getWrittenDate: function(date, language){
+
+		this.LOG.logDebug('Starting getWrittenDate');
+
+		try{
+
+			var gdt = new GlideDateTime(date);
+			var writtenDate = gdt.getDate().getByFormat('dd MMMMM yyyy');
+
+			//Strip first charactor if it's a zero
+			if(writtenDate.indexOf('0') == 0){
+				writtenDate = writtenDate.substr(1);
+			}
+
+			if(language == 'danish'){
+
+				var monthArr = [' January', ' February', ' March', ' April', ' May', ' June', ' July', ' August', ' September', ' October', ' November', ' December'];
+				var monthDanish = ['. januar', '. februar', '. marts', '. april', '. maj', '. juni', '. juli', '. august', '. september', '. oktober', '. november', '. december'];
+
+				monthArr.forEach(function(item, index) {
+
+					if(writtenDate.indexOf(item) != -1){
+
+						writtenDate = writtenDate.replace(item, monthDanish[index]); 
+
+					}
+
+				});
+			}
+			this.LOG.logDebug('Returning getWrittenDate Date: ' + gdt.getDisplayValue() + '\nLanguage: ' + language + '\nValue: ' + writtenDate);
+
+			return writtenDate;
+
+		}catch(error){
+			this.LOG.logError('getWrittenDate failed: ' + error);
+		}
+	},
+	
+	
+	
+
+	//#########################################################################################
+	//## GlideFilter has known issues with some conditions (dates and case sensitive).      ##   
+	//## Read more here:                                                                     ##
+	//## https://snprotips.com/blog/2019/3/11/glidefilter-is-broken-heres-an-alternative     ##
+	//## Thus custom solution is deployed. Left GlideFilter line in for reference            ##
+	//#########################################################################################
+	checkCondition : function(condition, table, sysID) {
+
+		this.LOG.logDebug('Starting checkCondition');
+		try {
+
+			if (condition == null) {
+
+				this.LOG.logDebug('Returning checkCondition \nValue: ' + true);
+				return true;
+
+			} else {
+
+				var rec = new GlideRecord(table);
+				rec.get(sysID);
+				
+				
+				//Workaround for GlideFilter described above
+				var result = this.checkRecord(rec, condition, true);
+				//var result = GlideFilter.checkRecord(rec, condition); 
+				//------------
+				this.LOG.logDebug('Returning checkCondition \nValue: ' + result);
+				return result;
+			}
+		}
+		catch(error) {
+
+			this.LOG.logError('checkCondition failed: ' + error);
+		} 
+	},
+	
+
+	
+	
+	
+	//This code has been created by the SN Pro Tips (Tim Woodruff maybe?)
+	//https://snprotips.com/blog/2019/3/11/glidefilter-is-broken-heres-an-alternative
+	checkRecord: function(gr, queries, matchAll) {
+        var i, encQuery;
+        var newQueryToken = '^NQ';
+        var queryMatches = false;
+        
+        //Set default value for matchAll
+        matchAll = (typeof matchAll == 'undefined') ? (false) : (matchAll);
+        
+        //Get an array of queries
+        if (queries.indexOf(newQueryToken) >= 0) { //If the encoded query contains multiple queries
+            queries = queries.split(newQueryToken);
+        } else {
+            queries = [queries];
+        }
+        
+        /*
+            Loop through each query.
+            If matchAll is true and one of the queries doesn't match, we can stop there and return false.
+            If matchAll is false, and one of the queries DOES match, we can stop there and return true.
+            Otherwise, keep looping until we run out of queries, and return the value in queryMatches
+        */
+        for (i = 0; i < queries.length; i++) {
+            encQuery = queries[i];
+            queryMatches = this._check(gr, encQuery);
+            
+            //If matchAll is true, but the query did not match, return false.
+            if (matchAll && !queryMatches) {
+                return false;
+            }
+            //If matchAll is false, and the query matched, return true.
+            if (!matchAll && queryMatches) {
+                return true;
+            }
+            //If matchAll is false and the query does NOT match, then continue checking.
+            //If matchall is true and the query DOES match, continue checking.
+        }
+        
+        return queryMatches;
+    },
+    
+    /**
+     * Private helper method for checking one query at a time against a GlideRecord. Used by .checkRecord().
+     * @param {GlideRecord} gr
+     * @param {String} query
+     * @returns {Boolean}
+     * @private
+     */
+    _check: function(gr, query) {
+        /*
+            Here, I'm using GlideRecord with .setLimit(1) because my query is SO specific (being
+             by sys_id) that this is the most efficient method in almost every scenario.
+            More information in this blog post:
+            https://community.servicenow.com/community?id=community_blog&sys_id=a2bc2e25dbd0dbc01dcaf3231f9619df
+        */
+        var grCheck = new GlideRecord(gr.getTableName());
+        grCheck.addQuery('sys_id', gr.getValue('sys_id'));
+        grCheck.addEncodedQuery(query);
+        grCheck.setLimit(1);
+        grCheck.query();
+        return grCheck.hasNext();
+    },
+
+
+
+	type: 'DocumentBuilderUtil'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 08:55:30</sys_created_on>
+        <sys_id>9448933adb0d001033995886dc96195a</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name>DocumentBuilderUtil</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_script_include_9448933adb0d001033995886dc96195a</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-10 11:27:38</sys_updated_on>
+    </sys_script_include>
+</record_update>

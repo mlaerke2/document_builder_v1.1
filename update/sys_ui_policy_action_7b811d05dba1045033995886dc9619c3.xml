@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>pdf_footer</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-04 09:02:54</sys_created_on>
+        <sys_id>7b811d05dba1045033995886dc9619c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>pdf_footer</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_ui_policy_action_7b811d05dba1045033995886dc9619c3</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-04 09:02:54</sys_updated_on>
+        <table>x_buno_doc_template</table>
+        <ui_policy display_value="Set headers and footers read only">d0311905dba1045033995886dc96194f</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

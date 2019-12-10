@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>be17bf59dbe5445033995886dc96191b</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_buno_doc_paragraph"&gt;
+    &lt;x_buno_doc_paragraph action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;condition/&gt;
+        &lt;custom_html&gt;true&lt;/custom_html&gt;
+        &lt;custom_numbering&gt;true&lt;/custom_numbering&gt;
+        &lt;html_body&gt;&lt;![CDATA[&lt;div style="position: absolute; bottom: 5px;"&gt;
+&lt;p style="text-align: center; break-after: avoid;" align="center"&gt;&lt;span lang="EN-US" style="font-family: verdana, geneva; font-size: 10pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: center; break-after: avoid;" align="center"&gt;&lt;span lang="EN-US" style="font-family: verdana, geneva; font-size: 10pt;"&gt;Yours sincerely,&lt;br /&gt;for BusinessNow A/S&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: center; break-after: avoid;" align="center"&gt;&lt;span lang="EN-US" style="font-family: verdana, geneva; font-size: 10pt;"&gt;&lt;br /&gt;${opened_by}&lt;br /&gt;HR Director&lt;/span&gt;&lt;/p&gt;
+&lt;p style="text-align: right; break-after: avoid;" align="right"&gt;&lt;span lang="EN-US" style="font-family: verdana, geneva; font-size: 10pt;"&gt;/${missingVariable}&lt;br /&gt;HR Responsible&lt;/span&gt;&lt;/p&gt;
+&lt;p class="MsoNormal" style="margin-bottom: 12pt; break-after: avoid;"&gt;&lt;span lang="EN-US" style="font-family: verdana, geneva; font-size: 10pt;"&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p style="break-after: avoid;"&gt;&lt;span lang="EN-US" style="font-family: verdana, geneva; font-size: 10pt;"&gt;AGREED&lt;br /&gt;DATE:&lt;br /&gt;&lt;br /&gt;..............................................................&lt;br /&gt;${assigned_to}&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;]]&gt;&lt;/html_body&gt;
+        &lt;order&gt;2&lt;/order&gt;
+        &lt;section display_value="Acceptance"&gt;8835f719dbe5445033995886dc96190f&lt;/section&gt;
+        &lt;short_description&gt;par - Acceptance 2&lt;/short_description&gt;
+        &lt;sys_class_name&gt;x_buno_doc_paragraph&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;mla@businessnow.dk&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2019-12-05 15:44:40&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;be17bf59dbe5445033995886dc96191b&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;par - Acceptance 2&lt;/sys_name&gt;
+        &lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;x_buno_doc_paragraph_be17bf59dbe5445033995886dc96191b&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;mla@businessnow.dk&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2019-12-05 15:44:40&lt;/sys_updated_on&gt;
+        &lt;table&gt;problem&lt;/table&gt;
+    &lt;/x_buno_doc_paragraph&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-09 19:26:45</sys_created_on>
+        <sys_id>0340d97edba9485033995886dc9619fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>par - Acceptance 2</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_metadata_link_0340d97edba9485033995886dc9619fc</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-09 19:26:45</sys_updated_on>
+        <tablename>x_buno_doc_paragraph</tablename>
+    </sys_metadata_link>
+</record_update>

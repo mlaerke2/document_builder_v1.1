@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="custom_headers_and_footers" label="Custom Headers and Footers" language="en" table="x_buno_doc_template">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>custom_headers_and_footers</element>
+            <help/>
+            <hint>Toogle on to refrain from using default Template Headers. Instead use custom headers or none (blank)</hint>
+            <label>Custom Headers and Footers</label>
+            <language>en</language>
+            <name>x_buno_doc_template</name>
+            <plural>Custom Headers and Footers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>mla@businessnow.dk</sys_created_by>
+            <sys_created_on>2019-11-15 07:53:03</sys_created_on>
+            <sys_id>d75b833edbc9001033995886dc961928</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Custom Headers and Footers</sys_name>
+            <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+            <sys_update_name>sys_documentation_x_buno_doc_template_custom_headers_and_footers_en</sys_update_name>
+            <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+            <sys_updated_on>2019-12-05 14:42:43</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

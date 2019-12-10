@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>e77ee791dbe5445033995886dc9619d8</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_section">
+    <x_buno_doc_section action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <exclude_headline>false</exclude_headline>
+        <order>3</order>
+        <section_headline>Terms on end of assignment</section_headline>
+        <sys_class_name>x_buno_doc_section</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-05 15:07:34</sys_created_on>
+        <sys_id>e77ee791dbe5445033995886dc9619d8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Terms on end of assignment</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>x_buno_doc_section_e77ee791dbe5445033995886dc9619d8</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-06 09:50:48</sys_updated_on>
+        <template display_value="Word Demo Template">b77aaf1ddba5445033995886dc9619b6</template>
+    </x_buno_doc_section>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-09 19:25:24</sys_created_on>
+        <sys_id>57ff097edba9485033995886dc96192b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Terms on end of assignment</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_metadata_link_57ff097edba9485033995886dc96192b</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-09 19:25:24</sys_updated_on>
+        <tablename>x_buno_doc_section</tablename>
+    </sys_metadata_link>
+</record_update>

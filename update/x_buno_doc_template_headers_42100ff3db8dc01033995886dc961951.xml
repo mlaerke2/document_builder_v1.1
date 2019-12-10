@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_template_headers">
+    <x_buno_doc_template_headers action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <file_type>word</file_type>
+        <footer_first_page>&lt;p align="center" style="text-align:center"&gt;&lt;span style="font-size:7.0pt;font-family:Verdana,sans-serif"&gt;&lt;br/&gt;&lt;strong&gt;BusinessNow&lt;/strong&gt;&lt;br/&gt;Vandtårnsvej 62A &amp;#8211; 2860 Søborg &amp;#8211; Denmark &lt;br/&gt;Phone: +45 70 230 231 &lt;br/&gt;businessnow.dk&lt;/span&gt;&lt;/p&gt; &#13;
+</footer_first_page>
+        <footer_first_page_display><![CDATA[<p align="center" style="text-align:center"><span style="font-size:7.0pt;font-family:Verdana,sans-serif"><br /><strong>BusinessNow</strong><br />Vandtårnsvej 62A – 2860 Søborg – Denmark <br />Phone: &#43;45 70 230 231 <br />businessnow.dk</span></p> ]]></footer_first_page_display>
+        <footer_second_page>&lt;p align="center" style="text-align:center"&gt;&lt;span style="font-size:7.0pt;font-family:Verdana,sans-serif"&gt;&lt;br/&gt;&lt;strong&gt;BusinessNow&lt;/strong&gt;&lt;br/&gt;Vandtårnsvej 62A &amp;#8211; 2860 Søborg &amp;#8211; Denmark &lt;br/&gt;Phone: +45 70 230 231 &lt;br/&gt;businessnow.dk&lt;/span&gt;&lt;/p&gt;</footer_second_page>
+        <footer_second_page_display><![CDATA[<p align="center" style="text-align:center"><span style="font-size:7.0pt;font-family:Verdana,sans-serif"><br /><strong>BusinessNow</strong><br />Vandtårnsvej 62A – 2860 Søborg – Denmark <br />Phone: &#43;45 70 230 231 <br />businessnow.dk</span></p>]]></footer_second_page_display>
+        <header_first_page>&lt;span lang=EN-US style="mso-ansi-language:EN-US"&gt;${headerLogo}&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;</header_first_page>
+        <header_first_page_display><![CDATA[<span lang="EN-US" style="mso-ansi-language:EN-US">${headerLogo}</span>]]></header_first_page_display>
+        <header_second_page>&lt;p class="MsoHeader" align="center" style="font-size:9.0pt; font-family:Verdana,sans-serif; margin:0cm;"&gt;-${pageNumber}-&lt;/p&gt;&#13;
+&lt;p class="MsoNormal" align="center" style="margin-top:0cm;font-size:9.0pt; font-family:Verdana,sans-serif; border-bottom: 1px solid black;"&gt;${usersName}  -  ${writtenDate}&lt;br style="mso-special-character:line-break"&gt;&lt;/p&gt;</header_second_page>
+        <header_second_page_display><![CDATA[<p class="MsoHeader" align="center" style="font-size:9.0pt; font-family:Verdana,sans-serif; margin:0cm;">-${pageNumber}-</p><p class="MsoNormal" align="center" style="margin-top:0cm;font-size:9.0pt; font-family:Verdana,sans-serif; border-bottom: 1px solid black;">${usersName}  -  ${writtenDate}<br style="mso-special-character:line-break" /></p>]]></header_second_page_display>
+        <image_alignment>0</image_alignment>
+        <pdf_footer/>
+        <sys_class_name>x_buno_doc_template_headers</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-18 09:38:34</sys_created_on>
+        <sys_id>42100ff3db8dc01033995886dc961951</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>x_buno_doc_template_headers_42100ff3db8dc01033995886dc961951</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 22:00:42</sys_updated_on>
+    </x_buno_doc_template_headers>
+</record_update>

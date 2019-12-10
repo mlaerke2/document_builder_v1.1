@@ -1,0 +1,1270 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_buno_doc.DocumentBuilder</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>This script generates a word file and attaches to the current record via a UI Action. &#13;
+One Template can consist of many Sections which again can consist of many Paragraphs. &#13;
+&#13;
+Known Issues:&#13;
+At the moment there are more supported styling functionality in word documents than in pdf documents.&#13;
+The following is not supported in pdf:&#13;
+Headers (other than logo)&#13;
+Footer (more than two lines)&#13;
+Styling of footer&#13;
+ &#13;
+Available Word Paragraph Variables: &#13;
+	${pageBreak}: inserts a page break&#13;
+	${date}: inserts current date&#13;
+	${writtenDate}: inserts current date in format 'dd MMMMM yyyy'&#13;
+	${template_script:XXX}: finds, evaluates and returns value&#13;
+&#13;
+Available Word Header Variables: &#13;
+	${headerLogo}: current logo image&#13;
+	${date}: inserts current date&#13;
+	${writtenDate}: inserts current date in format 'dd MMMMM yyyy'&#13;
+	${usersName}: inserts employees name&#13;
+	${pageNumbers}: inserts page numbers&#13;
+	${pageTotal}: inserts total number of pages&#13;
+</description>
+        <name>DocumentBuilder</name>
+        <script><![CDATA[var DocumentBuilder = Class.create();
+DocumentBuilder.prototype = {
+	initialize: function(recTable, recID, documentType, userField, testFullDocument) {
+
+		//Constants
+		this.TEMPLATE_TABLE = 'x_buno_doc_template';
+		this.SECTION_TABLE = 'x_buno_doc_section';
+		this.PARAGRAPH_TABLE = 'x_buno_doc_paragraph';
+		this.TEMPLATE_SCRIPT_TABLE = 'x_buno_doc_template_script';
+		this.TEMPLATE_SECTION_REL_TABLE = 'x_buno_doc_m2m_sections_templates';
+		this.TEMPLATE_HEADERS = 'x_buno_doc_template_headers';
+		this.USER_FIELD = userField;
+		this.DEFAULT_FONT = gs.getProperty('x_buno_doc.document.builder.default.font');
+		this.DEFAULT_FONT_SIZE = gs.getProperty('x_buno_doc.document.builder.default.font.size');
+		this.DEFAULT_TEXT_ALIGN = gs.getProperty('x_buno_doc.document.builder.default.text.align');
+		this.USE_DOCUMENT_TYPE = gs.getProperty('x_buno_doc.document.builder.document.type');
+		this.ALL_FIELD_REGEX = /\${([a-zA-Z0-9_.]+)(&nbsp;|&ensp;|&emsp;|\s|\t)*([\-|\+]{1})(&nbsp;|&ensp;|&emsp;|\s|\t)*(\d{1,4})([wdm]{1})(&nbsp;|&ensp;|&emsp;|\s|\t)*}/;
+		this.CURRENT_DATE_REGEX = /\${(Date)(&nbsp;|&ensp;|&emsp;|\s|\t)*([\-|\+]{1})(&nbsp;|&ensp;|&emsp;|\s|\t)*(\d{1,4})([wdm]{1})(&nbsp;|&ensp;|&emsp;|\s|\t)*}/;
+		this.ALL_CURRENT_DATE_REGEX = /\${(Date)(&nbsp;|&ensp;|&emsp;|\s|\t)*([\-|\+]{1})(&nbsp;|&ensp;|&emsp;|\s|\t)*(\d{1,4})([wdm]{1})(&nbsp;|&ensp;|&emsp;|\s|\t)*}/g;
+		this.INSTANCE = gs.getProperty('glide.servlet.uri'); //instance name
+		this.LOG = new global.GSLog('x_buno_doc.document.builder.log.level', 'DocumentBuilder');
+
+		// 				this.LOG.logDebug(message);
+		// 				this.LOG.logInfo(message);
+		// 				this.LOG.logNotice(message);
+		// 				this.LOG.logWarning(message);
+		// 				this.LOG.logError(message);
+
+
+		//Global variables - used in more than one function
+		this.date = '';
+		this.WrittenDate = '';
+		this.recordID = recID; //sys_id of record initiation document
+		this.recordTable = recTable; // table of record initiation document
+		this.documentType = documentType; //default is "document". If this.USE_DOCUMENT_TYPE == true, this can be used to match a UI action with a template
+		this.documentNameDisplay = '';
+		this.template;//use in template scripts later
+		this.headerImage = '';//use to save base64 image
+		this.base64EncodedLogo = '';
+		this.userName = '';
+		this.imageAlignment = '';
+		this.pdfFooter = '';
+		this.testFullDocument = false || testFullDocument;//set by UI Action
+		this.templateLanguage = '';
+		this.unEvaluatedVariable = [];
+		this.inaccessibleVariable = [];
+		this.customVariables = ["${date}", "${pageBreak}", "${writtenDate}"];
+
+	},
+
+	// 	Run order:
+	// 	createAttachment()
+	//---- _getUserDetails()
+	//---- _NumberOfTemplatesToCreate()
+	//---- _buildAttachment()
+	//-------- _getTemplateSelector()
+	//------------ _findSection()
+	//------------ _findParagraph()
+	//------------ _getParagraphHTML()
+	//-------- _createBase64Image()
+	//---- _createPDF()
+
+	createAttachment: function(fileType) {
+
+		try {
+
+			this.LOG.logDebug('1 template: Starting');
+			this._getUserDetails();
+			//block of code to try
+			this.LOG.logDebug('2 after _getUserDetails()');
+
+			var template = [];
+			//check how many templates pass the conditions on the current table and record
+			template = this._NumberOfTemplatesToCreate(fileType);
+
+			if (template.length != 0) {
+
+				for (var i=0; i< template.length; i++) {
+
+					var Payload = this._buildAttachment(template[i].sys_id, template[i].file_type, template[i].contains_logo);
+
+					var fileName = this.documentNameDisplay;
+					if (this.testFullDocument)
+						fileName = 'Test ' + fileName;
+
+					this.LOG.logDebug('_createAttachment() type: ' + template[i].file_type + '\n short description: ' + template[i].short_description);
+
+					var record = new GlideRecord(this.recordTable);
+					record.get(this.recordID);
+					var content = gs.base64Encode(Payload);
+					var GSA = new GlideSysAttachment();
+
+					if (template[i].file_type == 'word'){
+
+						fileName += '.doc';
+						GSA.writeBase64(record, fileName, 'application/vnd.ms-word', content);
+
+					}else if (template[i].file_type == 'pdf'){
+
+						fileName += '.pdf';
+						this._createPDF(fileName, this.recordTable, this.recordID, 'templateId', Payload);
+
+					} else {
+						this.LOG.logWarning('Could not recognize file type: ' + template[i].file_type);
+
+					}
+				}
+			}
+		}
+		catch(error) {
+			//block of code to handle errors
+			this.LOG.logError('createAttachment failed: ' + error);
+		} 
+
+	},
+
+
+	_createPDF : function(fileName, tableName, sysId, templateId, docBody) {
+
+		try{
+
+			var headerPosition =  this.imageAlignment;
+			var headerImageSysId = this.headerImage;
+			this.LOG.logDebug('headerImageSysId: ' + this.headerImage +'\nAlignment: ' + this.imageAlignment + '\ngetImageUrl: ' + this._createBase64Image(headerImageSysId).substring(0, 40));
+			var footerNote = this.pdfFooter;
+
+			var pdf = new global.GeneralFormAPI(fileName, tableName, sysId);
+			pdf.setDocument(this._createBase64Image(headerImageSysId), null, footerNote, headerPosition, null, "A4", null);
+			pdf.createPDF(docBody);
+		}catch (error) {
+
+			this.LOG.logError('_createPDF failed: ' + error);
+
+		}
+	},
+
+
+
+
+	_NumberOfTemplatesToCreate: function(fileType){
+
+		try{
+			this.LOG.logDebug('Starting _NumberOfTemplatesToCreate');
+
+			var templateNumber = 0; //debuggin purpose
+			var templateArray = [];
+			var template = new GlideRecord(this.TEMPLATE_TABLE);
+			var tableQuery = template.addQuery('table', this.recordTable);
+			if (this.documentType != 'test' && this.USE_DOCUMENT_TYPE)//DocumentType is defined in ui action. Used to filter out templates by Document Type (contract/document etc.). Controlled by gs.getProperty('x_buno_doc.document.builder.document.type');
+				template.addQuery('document_type', this.documentType);
+			if(!gs.nil(fileType))//FileType is defined in ui action. Used to filter out templates by File Type (PDF/Word)
+				template.addQuery('file_type', fileType);
+			template.orderByDesc('sys_created_on');
+			template.addActiveQuery();
+			template.query();
+			while (template.next()) {
+
+				var condition = template.getValue('condition');
+				this.LOG.logDebug('before checkCondition');
+				var conditionMet =  new DocumentBuilderUtil().checkCondition(condition, this.recordTable, this.recordID);
+
+				this.LOG.logDebug('after checkCondition');
+				if (!conditionMet)
+					continue;
+
+				var containsLogo = !gs.nil(template.getValue('header_logo'));
+				var tempObj = {
+
+					short_description: template.getValue('short_description'),
+					sys_id: template.getUniqueValue(),
+					file_type: template.getValue('file_type'), 
+					contains_logo: containsLogo
+				};
+
+
+
+				templateArray.push(tempObj);
+
+				this.LOG.logDebug('templateArray length: ' + templateArray.length + '\nTemplate: ' + templateArray[templateNumber].short_description + '\nTemplate File Type: ' + templateArray[templateNumber].file_type);
+				templateNumber ++;
+
+			}
+
+
+			return templateArray;
+
+		} catch (e) {
+			this.LOG.logError('_NumberOfTemplatesToCreate failed: ' + e);
+		}
+	},
+
+
+
+
+
+	_buildAttachment: function(template_sys, fileType, containsLogo) {
+
+		try {
+			this.LOG.logDebug('Starting _buildAttachment\nfileType' + fileType);
+
+			var templateGR = new GlideRecord(this.TEMPLATE_TABLE);
+			templateGR.get(template_sys);
+
+			var attachment = this._getTemplateSelector(template_sys, fileType);
+			this.LOG.logDebug('After  _getTemplateSelector');
+
+			//if a logo is present on the template. convert it to base64
+			if (containsLogo) {
+
+				this.headerImage = templateGR.header_logo.image.getDisplayValue() ? templateGR.header_logo.image.getDisplayValue().substring(0, templateGR.header_logo.image.getDisplayValue().indexOf('.iix')) : '';
+				var base64 = this._createBase64Image(this.headerImage); //save for later  
+				this.base64EncodedLogo = base64 + '';
+
+			}
+
+			var htmlBody = this.body;  //comes from this._getTemplateSelector();
+			var custom_headers = templateGR.custom_headers_and_footers;
+
+			var headersArrayObj = [];
+			var wordDocumentProps = '';
+			//Get headers and footers
+			var headersGR = new GlideRecord(this.TEMPLATE_HEADERS);
+			headersGR.addActiveQuery();
+			headersGR.addQuery('file_type', fileType);
+			headersGR.orderBy('sys_updated_on');
+			headersGR.query();
+			this.LOG.logDebug('headersGR \nquery: ' + headersGR.getEncodedQuery());
+			if (headersGR.next()) {
+
+				var headerFirst;
+				var footerFirst;
+				var headerSecond;
+				var footerSecond;
+
+				if (custom_headers) {//template marked as "Custom headers"
+
+					headerFirst = templateGR.getValue('header_first_page') || '';
+					footerFirst = templateGR.getValue('footer_first_page') || '';
+					headerSecond = templateGR.getValue('header_second_page') || '';
+					footerSecond = templateGR.getValue('footer_second_page') || '';	
+					this.pdfFooter = templateGR.getValue('pdf_footer');
+					this.imageAlignment = templateGR.getValue('image_alignment');
+
+				}else{//Get default header values
+
+					headerFirst = headersGR.getValue('header_first_page') || '';
+					footerFirst = headersGR.getValue('footer_first_page') || '';
+					headerSecond = headersGR.getValue('header_second_page') || '';
+					footerSecond = headersGR.getValue('footer_second_page') || '';	
+					this.pdfFooter = headersGR.getValue('pdf_footer');
+					this.imageAlignment = headersGR.getValue('image_alignment');
+				}
+
+				headersArrayObj.push(new this.Header('header', 'fh1', headerFirst));
+				headersArrayObj.push(new this.Header('footer', 'ff1', footerFirst));
+				headersArrayObj.push(new this.Header('header', 'h1', headerSecond));
+				headersArrayObj.push(new this.Header('footer', 'f1', footerSecond));
+			}
+
+			var headerArray = [];
+			//Swop header variables for real variables and build header string
+			if (!gs.nil(headersArrayObj)) {
+
+				for (var i=0; i< headersArrayObj.length; i++) {
+
+					if (!gs.nil(headersArrayObj[i].preWrap)) {
+
+						var header = headersArrayObj[i].preWrap;
+						header += this._getHeaderVariables(headersArrayObj[i].header) + headersArrayObj[i].postWrap;
+						headerArray.push(header);
+						var headerLog = header;
+						if (headerLog.indexOf('png;base64,i') != -1){
+							this.LOG.logDebug('header ' + i +'\nValue: ' + header.substring(0, 250));
+						}else{
+							this.LOG.logDebug('header ' + i +'\nValue: ' + header);
+						}
+
+					}
+				}
+			}
+
+			var mergeBody = '<body lang=EN-US style="tab-interval:.5in"><div class=Section1>'+htmlBody+'</div><table id="hrdftrtbl" border="0" cellspacing="0" cellpadding="0">' + headerArray.toString() + '</table></body></html>';
+
+			if (fileType == 'word'){
+
+				wordDocumentProps = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="UTF-8"/><title></title><!--[if gte mso 9]><xml> <w:WordDocument>  <w:View>Print</w:View>  <w:Zoom>100</w:Zoom></w:WordDocument></xml><![endif]--><style>@media print { p.MsoFooter, li.MsoFooter, div.MsoFooter{ mso-pagination:widow-orphan; tab-stops:center 3.0in right 6.0in;    font-size:9.0pt; margin-bottom:0pt;}<style><!-- /* Style Definitions */@page Section1{mso-footer-margin:19.85pt; mso-title-page:yes; mso-header: h1; mso-footer:f1; mso-first-header: fh1; mso-first-footer: ff1; mso-paper-source:0;}div.Section1{page:Section1;} table#hrdftrtbl{margin:0in 0in 0in 20in;width:1px; height:1px; overflow:hidden;}--></style></head>';
+
+				mergeBody = wordDocumentProps + mergeBody;
+			}
+			//this.LOG.logDebug('mergeBody: ' + mergeBody); //included base64 string (very long), thus commented out
+			this.LOG.logDebug('Final body Ready');
+
+			//var newHTML = htmlDeclaration + documentProps + mergeBody;
+			var answer = mergeBody;
+			return answer;
+		}
+		catch(error) {
+			//block of code to handle errors
+			this.LOG.logError('_buildAttachment failed: ' + error);
+		} 
+	},	
+
+
+
+	//Header class to create four header objects. 
+	Header : function(msoElement, id, header){
+
+		try{
+			//Only create Class if we have a header
+			if(!gs.nil(header)){
+				this.preWrap = '<div style="mso-element:' + msoElement + '" id=' + id +'>';
+				this.header = header;
+				this.postWrap = '</div>';
+
+			}else{
+
+				this.preWrap = '';
+				this.header = '';
+				this.postWrap = '';
+
+			}
+			return;
+
+		}catch(error){
+
+			this.LOG.logError('Header failed: ' + error);
+		}
+
+	},
+
+
+
+
+	_getTemplateSelector : function(template_sys, fileType) {
+
+
+		try {
+			this.LOG.logDebug('Starting _getTemplateSelector');
+
+			var templateGR = new GlideRecord(this.TEMPLATE_TABLE);
+			if (templateGR.get(template_sys)) {
+
+				this.template = templateGR;//use in template scripts
+				this.templateLanguage = templateGR.getValue('language');
+
+				var now = new GlideDateTime();
+				//get date in format: dd Month yyyy
+				var date = new DocumentBuilderUtil().getWrittenDate(now, this.templateLanguage);
+				this.writtenDate = date;
+				this.date = new GlideDate();
+				var fileName;
+
+				//If name of Template contains "translation", add it to document name
+				//set file name to file name if it's defined on the template
+				if (!gs.nil(templateGR.getValue('file_name'))){
+
+					fileName =  templateGR.getValue('file_name');
+
+				}else{
+
+					//Use the templates contractType to set a filename
+					fileName = templateGR.getDisplayValue('document_type');// + ' ' +this.userName;
+
+					//customer specific naming
+					//If name of Template short description contains "translation", add it to document name
+					/*if (templateGR.getValue('short_description').toLowerCase().indexOf('translation') > 0) {
+
+						fileName += ' translation ';
+
+					} */
+				}
+
+				this.documentNameDisplay = this._getHeaderVariables(fileName);
+
+				var parsedBody = this._findSection(templateGR.getUniqueValue(), fileType) + '';
+				var containsScriptArray = this._containsTemplateScript(parsedBody);//aray of template scripts
+
+				if (!gs.nil(containsScriptArray)) {
+
+					var contractRec = new GlideRecord(this.recordTable);
+					contractRec.get(this.recordID);
+					parsedBody = this._getTemplateScript(parsedBody, containsScriptArray, contractRec);
+				}
+
+				parsedBody = this._setTemplateValues(parsedBody);
+
+				if (parsedBody.length < 1)  { // The saved template body should not be empty.
+
+					this.body = 'found nothing to create'; 
+
+				} else {	
+
+					this.body = parsedBody;
+				}
+			}
+			return;
+		}
+		catch(error) {
+			this.LOG.logError('_getTemplateSelector failed: ' + error);
+		} 
+
+	},
+
+
+
+
+
+
+	//Function to find related section to the template selector
+	_findSection : function(id, fileType) {
+
+		try {
+			this.LOG.logDebug('Starting _findSection');
+
+			var body = '';
+			var currentSection = 0;
+			var sectionGR = new GlideRecord(this.SECTION_TABLE);
+			sectionGR.addEncodedQuery('template='+id);
+			sectionGR.addActiveQuery();
+			sectionGR.orderBy('order');
+			sectionGR.query();
+			while (sectionGR.next()) {
+				var secHead = sectionGR.getValue('section_headline');
+				var sectionID = sectionGR.getUniqueValue();
+
+				var checkForActiveParagraphs = this._checkForParagraphs(sectionID);
+
+				//Add this to the body - the section and the headline of it.
+				if (!sectionGR.exclude_headline && checkForActiveParagraphs) { 
+
+					currentSection++; //Add to the number calculator
+
+					if (fileType == 'word') {
+						body += "<div style='font-family:"+this.DEFAULT_FONT+";font-size:"+this.DEFAULT_FONT_SIZE+";mso-pagination:widow-orphan lines-together; page-break: avoid;	page-break-after:avoid'; display: inline;'> <strong>"+currentSection +'. '+ secHead +"</strong></div>";
+					} else {
+						body += "<p>&nbsp;</p><div style='font-family:"+this.DEFAULT_FONT+";font-size:"+this.DEFAULT_FONT_SIZE+";page-break: avoid;page-break-after:avoid'; display: inline;'>\n\n <strong>"+currentSection +'. '+ secHead +"</strong></div>";
+					}
+				}
+
+				var paragraphs = this._findParagraph(sectionID, currentSection, fileType); //Finds paragraphs related to the current section
+
+				//Add paragraph body
+				body += paragraphs;
+			} 
+			return body;
+		}
+		catch(error) {
+			//block of code to handle errors
+			this.LOG.logError('_findSection failed: ' + error);
+		} 
+	},
+
+
+
+	_checkForParagraphs : function(section){
+
+		try{
+			//check if there is any active paragraphs related to the section
+			var curOrder = 1;
+			var paragraph = new GlideRecord(this.PARAGRAPH_TABLE);
+			paragraph.addEncodedQuery('active=true^section='+section);
+			paragraph.orderBy('order');
+			paragraph.query();
+			while (paragraph.next()) {
+
+				var condition = paragraph.getValue('condition');
+
+				//Check the condition of the paragraph
+				var conditionMet = new DocumentBuilderUtil().checkCondition(condition, this.recordTable, this.recordID);
+
+				//if a single one is found return true
+				if (conditionMet)
+					return true;
+
+
+				if (!paragraph.hasNext()){
+					//no paragraph found yet that returned true and there is no more in the while loop - return false
+					return false;
+				}
+			}
+		}catch(error){
+
+			this.LOG.logError('_checkForParagraphs failed: ' + error);
+		}
+	},
+
+	_findParagraph : function(section, secID, fileType) {
+
+		try {
+			//block of code to try 
+			var body = '';
+			//allways start with 1 
+			var curOrder = 1;
+			var paragraph = new GlideRecord(this.PARAGRAPH_TABLE);
+			paragraph.addEncodedQuery('active=true^section='+section);
+			paragraph.orderBy('order');
+			paragraph.query();
+			while (paragraph.next()) {
+
+				var condition = paragraph.getValue('condition');
+
+				//Check to see if paragraph is to be put in the body
+				var conditionMet = new DocumentBuilderUtil().checkCondition(condition, this.recordTable, this.recordID);
+
+				this.LOG.logDebug('Looking for paragraph: ' + paragraph.short_description + '\nconditionMet: ' + conditionMet);
+
+
+				if (conditionMet || this.testFullDocument) {
+
+					if (this.testFullDocument){//used for ui action "Test Full Document"
+
+						if (gs.nil(condition))
+							condition = 'Always show';
+
+						body += "<span style='font-family:"+this.DEFAULT_FONT+";font-size:"+this.DEFAULT_FONT_SIZE+"; mso-highlight: yellow;'>Condition: " + condition + ' </span> ';
+
+					} 
+					body += this._getParagraphHTML(paragraph, secID, curOrder, fileType);	
+
+					if (!paragraph.custom_numbering)
+						curOrder++;
+				}
+			}
+			return body;
+		}
+		catch(error) {
+			//block of code to handle errors
+			this.LOG.logError('_findParagraph failed: ' + error);
+		}
+	},
+
+
+
+
+
+	_getParagraphHTML : function(paragraph, secID, curOder, fileType) {
+
+		try {
+			//get the HTML body of the pagraph
+			var body = '';
+			var customHTMLtext = paragraph.html_body;
+			var strippedHTMLtext = paragraph.html_body;
+			var secHeading = secID +'.'+ curOder + '.  ';
+			var matchRegex;
+			var regexSwap;
+			var pa = paragraph.short_description;
+
+			//add numbering to paragraphs
+			if (!paragraph.custom_numbering) {
+
+				//Default numbering and custom html
+				if (paragraph.custom_html) {
+
+					//Find start of first > that is not followed by a <
+					//To indicate where text startes and tags stop
+					matchRegex = /(>[^<])/;
+					customHTMLtext = this._insertWithRegex(matchRegex, -1, customHTMLtext, secHeading, pa);//I have to subtract 1 to get the correct index because our match is ">x" and we want to locate the middle of it 
+
+				} else { //Default numbering and default html
+
+					//Find start of first <p> tag
+					matchRegex = /(<p([^>]*?)>)/;
+					strippedHTMLtext = this._insertWithRegex(matchRegex, 0, strippedHTMLtext, secHeading, pa);
+				}
+			} 
+
+
+			if (paragraph.custom_html && curOder == 1){
+				//remove space between section header and first senctence
+
+				this.LOG.logDebug('customHTMLtext 1: \nOrder: ' + curOder + '\n' + pa + '\n'+ customHTMLtext);
+
+				//Find start of first > that is not followed by a <
+				//To indicate where text startes and tags stop
+				var firstTextMatch = customHTMLtext.match(/(>[^<])/);
+
+				//Odly we did not find any text out of tags. Return whatever it is we have and take cover!
+				if (gs.nil(firstTextMatch))
+					return  customHTMLtext;
+
+				var firstTextIndex = parseInt(customHTMLtext.indexOf(firstTextMatch[0])) -1;//get start index
+
+				//get index of first style= inside a <tag
+				var firstStyleMatch = customHTMLtext.match(/(<[^>]*)style=/);
+				var firstStyleIndex;
+
+				if (!gs.nil(firstStyleMatch))
+					firstStyleIndex = parseInt(customHTMLtext.indexOf(firstStyleMatch[0])) + parseInt(firstStyleMatch[0].length);//get end index
+				var firstSpanMatch = customHTMLtext.match(/(<span)/);
+				var firstSpanIndex = 999999;
+				if (!gs.nil(firstSpanMatch))
+					firstSpanIndex = parseInt(customHTMLtext.indexOf(firstSpanMatch[0]));//get start index
+
+
+				//if there is a style tag before the first text, use it to add styling
+				if(!gs.nil(firstStyleMatch) && firstTextIndex > firstStyleIndex && firstStyleIndex < firstSpanIndex){
+
+					matchRegex = /(<[^>]*?)style=/;
+					var inputText1 = 'margin-top:0cm;';
+					customHTMLtext = this._insertWithRegex(matchRegex, 1, customHTMLtext, inputText1, pa);
+
+					//if there is NO style tag before the first text, use the first tag to add styling
+				}else{
+
+					matchRegex = /(<[^>]*)/;
+					var inputText2 = ' style="margin-top:0cm;"';
+					customHTMLtext = this._insertWithRegex(matchRegex, 0, customHTMLtext, inputText2, pa);
+				}
+
+				this.LOG.logDebug('customHTMLtext 2: \nOrder: ' + curOder + '\n' + pa + '\n'+ customHTMLtext);
+
+			}
+			if (paragraph.custom_html) {
+
+				//custom html is done. Return and get it over with
+				return  customHTMLtext;
+			}
+
+
+
+
+
+			//this part has been removed. Instead of first stripping all <p> tags and later wrapping everything in our own single <p> tag, we will swap each <p> tag with our own.
+			// strippedHTMLtext = strippedHTMLtext.replace(/(<p([^>]*?)>)/g, '');
+			// strippedHTMLtext = strippedHTMLtext.replace(/(<\/p([^>]*?)>)/g, "");
+			//strippedHTMLtext = strippedHTMLtext.replace(/(?:\r\n|\r|\n)/g, '<br/>');
+
+			var defaultParaStyling = "<p style='font-family:"+this.DEFAULT_FONT+";font-size:"+this.DEFAULT_FONT_SIZE+";text-align:"+this.DEFAULT_TEXT_ALIGN+";mso-pagination:widow-orphan lines-together; page-break: avoid; display: inline;";
+			defaultParaStyling += curOder == 1 ? "margin-top:0cm;'>" : "'>";//remove space between section header and first paragraph OR close p tag
+
+			//Swapping each <p> tags and adding our own <p> tags
+			this.LOG.logDebug('strippedHTMLtext 1: \nOrder: ' + curOder + '\n' + pa + '\n' + strippedHTMLtext);
+			strippedHTMLtext = strippedHTMLtext.replace(/(<p([^>]*?)>)/g, defaultParaStyling);
+			this.LOG.logDebug('strippedHTMLtext 2: \nOrder: ' + curOder + '\n' + pa + '\n' + strippedHTMLtext);
+
+			return strippedHTMLtext; 
+
+		}
+		catch(error) {
+			//block of code to handle errors
+			this.LOG.logError('_getParagraphHTML failed: ' + error);
+		} 
+	},
+
+
+	_insertWithRegex: function(matchRegex, indexAddition, string, inputString, paragraph){
+		//This is created to insert the numbering inside the <p> </p> tag to include the numbering in the styling 
+		//Use the function to insert any input (string) into any string, based on a regular expression
+
+		this.LOG.logDebug('Starting _insertWithRegex \n' + paragraph);
+		try{
+			var pMatch = string.match(matchRegex);
+
+			if (!gs.nil(pMatch)) {
+
+				var pIndex = parseInt(string.indexOf(pMatch[0])) + indexAddition;//get start index
+				var pMatchLength = pMatch[0].length;//get length of <p style="xxx"> tag
+				var pEnd = pIndex + parseInt(pMatchLength);//get end of <p>tag
+				//insert number just after the first closing <p>
+				var output = [string.slice(0, pEnd), inputString, string.slice(pEnd)].join('');
+
+				return output;
+
+			}else{
+				return string;
+			}
+
+		}catch (error) {
+			this.LOG.logError('_insertWithRegex failed: ' + paragraph +'\n' + error);
+		}
+
+
+	},
+
+
+
+
+	_createBase64Image: function(attachmentSysId) {
+
+		this.LOG.logDebug('Starting _createBase64Image')
+		try {
+
+			if (gs.nil(attachmentSysId)) {
+
+				this.LOG.logWarning('did not find attachment sys: ' + attachmentSysId);
+				return '';
+			}
+
+			var imageAttachment = new GlideRecord('sys_attachment');
+			if (!imageAttachment.get(attachmentSysId)) {
+
+				this.LOG.logWarning('did not find attachment record: ' + attachmentSysId);
+				return '';
+			}
+
+			if (imageAttachment) {
+
+
+				var base64Image = String(new GlideSysAttachment().getContentBase64(imageAttachment));
+				var base64Return = 'data:image/png;base64,'+ base64Image;
+				this.LOG.logDebug('Returning _createBase64Image \nValue: ' + base64Return.substring(0, 40));
+				return base64Return;
+
+			}
+		}
+		catch(error) {
+			//block of code to handle errors
+			this.LOG.logError('_createBase64Image failed: ' + error);
+		} 
+	},
+
+
+	//Find the template values ${}
+	_setTemplateValues: function(parsedBody){
+
+		try{
+
+			var regex = /\${([^}]*)}/g;
+			var matched = parsedBody.match(regex);
+			if(gs.nil(matched))
+				return parsedBody;
+			var date = new GlideDateTime().getLocalDate();
+			var tableName = this.recordTable;
+			var tableId = this.recordID;
+			//var securityUtil = new global.HRSecurityUtils();
+
+			if (this.parent) {
+				tableName = this.parent.sys_class_name;
+				tableId = this.parent.sys_id;
+			}
+			var gr = new GlideRecord(tableName);
+			if (gr.get(tableId)) {
+				/*
+						- Replace current date tag ${date} with current date value
+					*/
+				var tempVar = '';
+				if (this.testFullDocument) {
+
+					tempVar = "<span style='font-family:"+this.DEFAULT_FONT+";font-size:"+this.DEFAULT_FONT_SIZE+"; mso-highlight: lime;'>{ " + this.date + ' }</span> ';	
+					parsedBody = parsedBody.replace(/\${date\}/gi, tempVar);
+
+					tempVar = "<span style='font-family:"+this.DEFAULT_FONT+";font-size:"+this.DEFAULT_FONT_SIZE+"; mso-highlight: lime;'>{ " + this.writtenDate + ' }</span> ';	
+					parsedBody = parsedBody.replace(/\${writtenDate\}/gi, tempVar);
+
+				} else {
+					parsedBody = parsedBody.replace(/\${date\}/gi, this.date);
+					parsedBody = parsedBody.replace(/\${date\}/gi, this.writtenDate);
+				}
+
+
+				/*
+						- Insert page break
+					*/
+				parsedBody = parsedBody.replace(/\${pageBreak\}/gi, "<br clear=all style='mso-special-character:line-break;page-break-before:always'><br style='mso-special-character:line-break'>");
+
+
+				this.LOG.logDebug('looking for variables: ' + matched);
+
+				for (var i in matched) {
+
+					if (this.unEvaluatedVariable.indexOf(matched[i]) > -1 || this.inaccessibleVariable.indexOf(matched[i]) > -1 || this.customVariables.indexOf(matched[i]) > -1) 
+						continue;
+
+					var element = gr;
+					var field;
+
+					//Date processing
+					var isOffsetDate = this._isOffsetDate(matched[i], gr);
+					var str = "";
+					var offsetData = this._offsetValues(matched[i]);
+
+
+
+					if (isOffsetDate) {
+						str = offsetData.reference;
+
+					} else {
+						str = matched[i].match(/\${(.*)}/).pop();
+
+					}
+
+					str = str.trim();
+
+					if (!str)
+						continue;
+					var references = str.split(/[\.]+/g);
+
+					for (var j=0; j < references.length;j++) {
+						field = references[j];
+						this.LOG.logDebug('looking for field: ' + field);
+						if ( j == references.length-1)
+							break;
+						if (element.isValidField(field)) {
+
+							if (element.getElement(field).canRead())
+								element = element.getElement(field).getRefRecord();
+							else {
+								parsedBody = parsedBody.replace(matched[i], "<font color='#ff0000'>"+matched[i]+"</font>");
+								this.inaccessibleVariable.push(matched[i]);
+								break;
+							}	
+						}
+						else 
+							break;
+					}
+
+
+					if (element.isValidField(field)) { 
+
+						if (element.getElement(field).canRead()) {
+
+							if (isOffsetDate) {
+								parsedBody = parsedBody.replace(matched[i], this._applyOffset(element.getDisplayValue(field), offsetData));
+							} else {
+
+								if (gs.nil(element.getElement(field))){
+
+									if (this.testFullDocument) {
+
+										tempVar = "<span style='font-family:"+this.DEFAULT_FONT+";font-size:"+this.DEFAULT_FONT_SIZE+"; mso-highlight: lime;'>{ " + field + ' }</span> ';	
+										parsedBody = parsedBody.replace(matched[i], tempVar);
+									} else {
+										parsedBody = parsedBody.replace(matched[i], '');
+									}
+
+								} else {
+
+									var typeCheck = this._checkType(field, element);
+
+									if (typeCheck.nonStandardType) {
+
+										this.LOG.logDebug('Looking for ' + field + '\nValue: ' + element.getDisplayValue(field) + '\nTypeCheck: ' + JSON.stringify(typeCheck));
+
+										if (this.testFullDocument) {
+
+											tempVar = "<span style='font-family:"+this.DEFAULT_FONT+";font-size:"+this.DEFAULT_FONT_SIZE+"; mso-highlight: lime;'>{ " + typeCheck.value + ' }</span> ';	
+											parsedBody = parsedBody.replace(matched[i], tempVar);
+
+										} else {
+
+											parsedBody = parsedBody.replace(matched[i], typeCheck.value);
+										}
+
+									} else {
+
+
+										if (this.testFullDocument) {
+
+											tempVar = "<span style='font-family:"+this.DEFAULT_FONT+";font-size:"+this.DEFAULT_FONT_SIZE+"; mso-highlight: lime;'>{ " + element.getDisplayValue(field) + ' }</span> ';	
+											parsedBody = parsedBody.replace(matched[i], tempVar);
+
+										} else {
+
+											parsedBody = parsedBody.replace(matched[i], element.getDisplayValue(field));
+
+										}
+
+									}
+								}
+							}
+						} else {
+							parsedBody = parsedBody.replace(matched[i], "<font color='#ff0000'>"+matched[i]+"</font>");
+							this.inaccessibleVariable.push(matched[i]);
+						}
+					} else {
+						if (field == "signature") {
+							parsedBody = parsedBody.replace(matched[i], "${"+element.getValue("user_name")+'_signature'+"}");
+						} else {
+							parsedBody = parsedBody.replace(matched[i], "<font color='#ff0000'>"+matched[i]+"</font>");
+							this.unEvaluatedVariable.push(matched[i]);
+						}
+					}
+				}
+
+
+				/*
+						- Globally search for all the current date occurences (${date}) with offset
+						- Get offsetObject for each occurence
+						- Replace each occurence with offset value
+
+					*/ 
+
+				var allDates = this.ALL_CURRENT_DATE_REGEX;
+				var offsetCurrentDateOccurence = parsedBody.match(allDates);
+				if (offsetCurrentDateOccurence != null) {
+					for(var index in offsetCurrentDateOccurence) {
+						var offsetObject = this._offsetValues(offsetCurrentDateOccurence[index]);
+						var dateWithOffset = this._applyOffset(date, offsetObject);
+						parsedBody = parsedBody.replace(offsetCurrentDateOccurence[index], dateWithOffset);
+					}
+				}
+			} else
+				this.body = gs.getMessage('Record not found');
+			return parsedBody;
+
+		}catch(error){
+
+			this.LOG.logError('_setTemplateValues failed: ' + error)
+		}
+	},
+
+	_getHeaderVariables: function(customHeader){
+
+		/*	
+			${headerLogo}: current logo image
+			${date}: inserts current date
+			${usersName}: inserts employees name
+			${pageNumber}: inserts page numbers
+			${pageTotal}: inserts total number of pages
+
+			*/
+		try{
+
+			var imgString = '';
+			if (!gs.nil(this.base64EncodedLogo)) {
+
+				imgString = "<img src='" + this.base64EncodedLogo + "'/>";
+
+			} else {
+				imgString = '{No image on Template}';
+
+			}
+
+			var valueObj = {
+
+				headerLogo: imgString,
+
+				date: this.date + '',
+
+				writtenDate: this.writtenDate + '',
+
+				usersName: this.userName + '',
+
+				pageNumber: '<!--[if supportFields]><span class=MsoPageNumber style="font-size:9.0pt; font-family:'+this.DEFAULT_FONT+'; mso-spacerun:yes"><span style="mso-element:field-begin"></span> PAGE </span><![endif]--><span class="MsoPageNumber">2</span><!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->',
+
+				pageTotal: "<!--[if supportFields]><span style='font-size:9.0pt; font-family:"+this.DEFAULT_FONT+";margin:0cm;margin-bottom:.0001pt;'><span style='mso-element:field-begin'></span><span style='mso-spacerun:yes'> </span>NUMPAGES<span style='mso-spacerun:yes'> </span>\* Arabic<span style='mso-spacerun:yes'>  </span>\* MERGEFORMAT <span style='mso-element:field-separator'></span></span><![endif]--><span style='font-size:9.0pt; font-family:"+this.DEFAULT_FONT+";margin:0cm;margin-bottom:.0001pt;'><span style='mso-no-proof:yes'>2</span></span><!--[if supportFields]><span style='mso-element:field-end'></span></span><![endif]-->"
+			};
+
+			var regex = /\${([^}]*)}/g;
+			var matched = customHeader.match(regex);
+
+			for (var i in matched) {
+				//remove ${} and store in field
+				var field = matched[i].substring(2,matched[i].indexOf('}'));
+
+				customHeader = customHeader.replace(matched[i], valueObj[field]);
+			}
+			return customHeader;
+
+		}catch(error){
+
+			this.LOG.logError('_getHeaderVariables failed: ' + error);
+		}
+
+	}, 
+
+
+	_containsTemplateScript: function(parsedBody){
+
+		if(gs.nil(parsedBody))
+			return;
+
+		this.LOG.logDebug('Starting _containsTemplateScript');
+		try{
+
+			var regex = /\${template_script:([^}])*}/gi;
+
+			var scriptMatch = parsedBody.match(regex);
+			if(gs.nil(scriptMatch))
+				this.LOG.logDebug('returning _containsTemplateScript \nValue:' + scriptMatch);
+			else
+				this.LOG.logDebug('returning _containsTemplateScript \nValue:' + scriptMatch.toString());
+
+			return scriptMatch;
+
+		}catch(error){
+
+			this.LOG.logError('_containsTemplateScript failed: ' + error);
+		}
+
+	}, 
+
+
+
+
+
+	_getTemplateScript: function(parsedBody, scriptMatch, current){
+
+		this.LOG.logDebug('Starting _getTemplateScript');
+		try{
+			for (var i in scriptMatch) {
+
+				this.LOG.logDebug('_getTemplateScript looking for: ' + scriptMatch[i]);
+
+				var variable = scriptMatch[i];
+				var script = variable.substring(18,variable.indexOf('}'));
+				var result;
+				this.LOG.logDebug('_getTemplateScript script: ' + script);
+
+				var templateScript = new GlideRecord(this.TEMPLATE_SCRIPT_TABLE);
+				templateScript.addActiveQuery();
+				templateScript.addQuery("name", script);
+				templateScript.query();
+				if (templateScript.next()) {
+					this.LOG.logDebug('_getTemplateScript found: ' + templateScript.name);
+
+					var vars = {
+						'current': current, 
+						'template': this.template
+					};
+					try{
+
+						var evaluator = new GlideScopedEvaluator(); 
+						result = evaluator.evaluateScript(templateScript, 'script', vars);
+						this.LOG.logDebug('Returning _getTemplateScript \nValue: ' + result);
+
+					}catch(error){
+
+						this.LOG.logError('_getTemplateScript: ' + error);
+
+					}
+
+					var re = new RegExp('\\' + variable,"gi");
+					parsedBody = parsedBody.replace(re, result);
+
+				}
+			}	
+
+			return parsedBody;
+
+		}catch(error){
+
+			this.LOG.logError('_getTemplateScript failed: ' + error);	
+		}
+
+	},
+
+
+
+
+
+	_checkType: function(fieldName, tableGR){
+
+		try{
+			this.LOG.logDebug('starting _checkType: ');
+
+			var intType = ['integer'];
+			var dateTypes = ['glide_date_time', 'date', 'glide_date', 'due_date'];
+			var decimalType = ['decimal'];
+
+			var element = tableGR.getElement(fieldName);
+
+			var isInt = ((element.toString() != null) && intType.toString().indexOf(element.getED().getInternalType()) > -1);
+			var isDate = ((element.toString() != null) && dateTypes.toString().indexOf(element.getED().getInternalType()) > -1);
+			var isDecimal = ((element.toString() != null) && decimalType.toString().indexOf(element.getED().getInternalType()) > -1);
+
+			var returnObj = {
+				nonStandardType: false,
+				type: '',
+				value: ''
+			};
+
+			if (isDecimal){
+
+				var numberWithDots = element.toString().replace(/,/g, ".");
+
+				returnObj = {
+					nonStandardType: true,
+					type: 'decimal',
+					value: numberWithDots
+				};
+			}
+
+			if (isDate){
+				returnObj = {
+					nonStandardType: true,
+					type: 'date',
+					value: new DocumentBuilderUtil().getWrittenDate(element, this.templateLanguage)//this._getWrittenDate(element)
+				};
+			}
+
+			if (isInt){
+
+				var numberWithCommas = element.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+				var numberWithCommas2 = tableGR.getDisplayValue(fieldName).toString().replace(/,/g, ".");
+
+				returnObj = {
+					nonStandardType: true,
+					type: 'integer',
+					value: numberWithCommas
+				};
+			}
+
+			return returnObj;
+
+		}catch(error){
+
+			this.LOG.logError('_checkType failed: ' + error);
+		}
+
+	},
+
+
+	_getUserDetails : function() {
+
+		this.LOG.logDebug('starting _getUserDetails');
+		try{
+
+			var originRecord = new GlideRecord(this.recordTable);
+			if (originRecord.get(this.recordID)) {
+
+
+				//check that a user field has been send from ui action and that there is a value on the record
+				if (!gs.nil(this.USER_FIELD) && !gs.nil(originRecord.getDisplayValue(this.USER_FIELD))) {
+
+					this.userName = originRecord.getDisplayValue(this.USER_FIELD);
+
+				} else if (!gs.nil(this.USER_FIELD)) {
+					
+					this.userName = this.USER_FIELD;
+					
+				} else {
+
+					this.userName = '${userName}';
+				}	
+			}
+			this.LOG.logDebug('User: ' + this.userName);
+
+		}
+		catch(error){
+			//block of code to handle errors
+			this.LOG.logError('_getUserDetails failed: ' + error);
+		}
+	},
+
+
+	/*
+			Bellow this is OOB and is currently not triggered our scenarios
+			However it should be working.
+			*/
+
+	_isOffsetDate: function(field, gr) {
+
+		var re = this.ALL_FIELD_REGEX;
+		var dateWithOffset = field.match(re);
+		var offsetDate = {};
+		var isDateType = false;
+		if (dateWithOffset != null && gr) {
+			offsetDate = {
+				"reference" : dateWithOffset[1], //field name
+				"sign" : dateWithOffset[3], // add (+) or subtract (-) date
+				"quantity" : dateWithOffset[5],
+				"type" : dateWithOffset[6]
+			};
+			isDateType = this.isDateType(offsetDate.reference, gr);
+
+		}
+		return (dateWithOffset != null && isDateType);
+	},
+
+	_offsetValues: function(field) {
+
+		var re = this.ALL_FIELD_REGEX;
+		var dateWithOffset = field.match(re);
+
+		if (dateWithOffset != null) {
+			return {
+				"reference" : dateWithOffset[1], //field name
+				"sign" : dateWithOffset[3], // add (+) or subtract (-) date
+				"quantity" : dateWithOffset[5],
+				"type" : dateWithOffset[6]
+			};
+		}
+		return {
+			"reference" : "", //field name
+			"sign" : "", // add (+) or subtract (-) date
+			"quantity" : "",
+			"type" : ""
+		};
+	},
+	_isCurrentDateWithOffset: function(field) {
+
+		var re = this.CURRENT_DATE_REGEX;
+		return (field.match(re) != null);
+	},
+
+	_applyOffset : function(elementValue, offsetValue) {
+
+		if (elementValue && !this._isOffsetObjectEmpty(offsetValue)) {
+
+			var date = new GlideDateTime();
+			date.setDisplayValue(elementValue);
+			var sign = parseInt(offsetValue.sign + '1');
+			var offset = sign * offsetValue.quantity; 
+
+			switch(offsetValue.type) {
+				case "w" : date.addWeeksLocalTime(offset);
+					break;
+				case "m" : date.addMonthsLocalTime(offset);
+					break;
+				case "d" : date.addDaysLocalTime(offset);
+					break;
+				default : break;
+			}
+			return date.getLocalDate().getDisplayValue();
+		}
+		return "";
+	},
+
+
+
+	//Remove all variables with ${}
+	_remove_all_variables: function(parsedBody) {
+		var regex = /\${(.*?)}/g;
+		var matched = parsedBody.match(regex);
+
+		for (var i in matched) 
+			parsedBody = parsedBody.replace(matched[i], "");
+
+		return parsedBody;
+	},
+
+	type: 'DocumentBuilder'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 09:07:19</sys_created_on>
+        <sys_id>596b1bbadb0d001033995886dc961967</sys_id>
+        <sys_mod_count>209</sys_mod_count>
+        <sys_name>DocumentBuilder</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_script_include_596b1bbadb0d001033995886dc961967</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 23:23:24</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_section">
+    <x_buno_doc_section action="DELETE">
+        <active>true</active>
+        <order>3</order>
+        <section_headline>This section will contain custom HTML</section_headline>
+        <sys_class_name>x_buno_doc_section</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-23 19:27:23</sys_created_on>
+        <sys_id>18b6b2a5db95481033995886dc96193c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>This section will contain custom HTML</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>x_buno_doc_section_18b6b2a5db95481033995886dc96193c</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-03 10:45:58</sys_updated_on>
+        <template display_value="PDF Demo Template">6ac232e1db95481033995886dc9619d4</template>
+    </x_buno_doc_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
+        <file_path/>
+        <instance_id>b82d00e1db6f7644ff27d5b0cf96196c</instance_id>
+        <instance_name>businessnowsvsdemo3</instance_name>
+        <name>x_buno_doc_section_18b6b2a5db95481033995886dc96193c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_buno_doc_section"><x_buno_doc_section action="INSERT_OR_UPDATE"><active>true</active><order>3</order><section_headline>This section will contain custom HTML</section_headline><sys_class_name>x_buno_doc_section</sys_class_name><sys_created_by>mla@businessnow.dk</sys_created_by><sys_created_on>2019-11-23 19:27:23</sys_created_on><sys_id>18b6b2a5db95481033995886dc96193c</sys_id><sys_mod_count>4</sys_mod_count><sys_name>This section will contain custom HTML</sys_name><sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package><sys_policy/><sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope><sys_update_name>x_buno_doc_section_18b6b2a5db95481033995886dc96193c</sys_update_name><sys_updated_by>mla@businessnow.dk</sys_updated_by><sys_updated_on>2019-12-03 10:45:58</sys_updated_on><template display_value="PDF Demo Template">6ac232e1db95481033995886dc9619d4</template></x_buno_doc_section></record_update>]]></payload>
+        <payload_hash>242569155</payload_hash>
+        <record_name>This section will contain custom HTML</record_name>
+        <reverted_from/>
+        <source>21ce37abdb05c01033995886dc961925</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-03 10:45:58</sys_created_on>
+        <sys_id>fb8f1830dbe1c05033995886dc961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16ecb5de4a70000001</sys_recorded_at>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-03 10:45:58</sys_updated_on>
+        <type>Section</type>
+        <update_guid>f38f1830aee1c050dfde72d89710a328</update_guid>
+        <update_guid_history>f38f1830aee1c050dfde72d89710a328:242569155,478f183084e1c050f33f703406d76e25:-791365961,32b2489620d1c81070b15f30cf177371:132620881,7cb2489619d1c81061ee9e0672693502:-1127141686,04077aa57095481039e9660ad108490e:1674818390</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="This section will contain custom HTML">3eb43319dbe5445033995886dc961984</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-05 15:34:17</sys_created_on>
+        <sys_db_object display_value="" name="x_buno_doc_section">x_buno_doc_section</sys_db_object>
+        <sys_id>18935129e59c4260832fc91082f0b100</sys_id>
+        <sys_metadata>18b6b2a5db95481033995886dc96193c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>This section will contain custom HTML</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_scope_delete display_value="">25f41efe0f984d6895ad3fb4d47fd1c9</sys_scope_delete>
+        <sys_update_name>x_buno_doc_section_18b6b2a5db95481033995886dc96193c</sys_update_name>
+        <sys_update_version display_value="x_buno_doc_section_18b6b2a5db95481033995886dc96193c">fb8f1830dbe1c05033995886dc961928</sys_update_version>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-05 15:34:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

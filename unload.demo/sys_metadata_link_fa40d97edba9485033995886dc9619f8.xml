@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>e6267759dbe5445033995886dc961904</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="x_buno_doc_paragraph"&gt;
+    &lt;x_buno_doc_paragraph action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;condition/&gt;
+        &lt;custom_html&gt;false&lt;/custom_html&gt;
+        &lt;custom_numbering&gt;false&lt;/custom_numbering&gt;
+        &lt;html_body&gt;&lt;![CDATA[&lt;p&gt;The terms of this letter are governed by Danish law and any dispute or claim arising out of or in connection with the letter shall be finally settled by the courts of Denmark. In addition to the provisions herein, certain provisions governing the employment relationship are outlined in the Offshore Employee Handbook, which is deemed part of your employment conditions, but is subject to change at the company&amp;rsquo;s discretion. The latest version of the Offshore Employee Handbook can be provided upon request to HR.&lt;/p&gt;]]&gt;&lt;/html_body&gt;
+        &lt;order&gt;2&lt;/order&gt;
+        &lt;section display_value="Terms on end of assignment"&gt;77157719dbe5445033995886dc961947&lt;/section&gt;
+        &lt;short_description&gt;par - Terms on end of assignment 2&lt;/short_description&gt;
+        &lt;sys_class_name&gt;x_buno_doc_paragraph&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;mla@businessnow.dk&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2019-12-05 15:40:33&lt;/sys_created_on&gt;
+        &lt;sys_id&gt;e6267759dbe5445033995886dc961904&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;
+        &lt;sys_name&gt;par - Terms on end of assignment 2&lt;/sys_name&gt;
+        &lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;
+        &lt;sys_policy/&gt;
+        &lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;
+        &lt;sys_update_name&gt;x_buno_doc_paragraph_e6267759dbe5445033995886dc961904&lt;/sys_update_name&gt;
+        &lt;sys_updated_by&gt;mla@businessnow.dk&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2019-12-05 15:40:33&lt;/sys_updated_on&gt;
+        &lt;table&gt;problem&lt;/table&gt;
+    &lt;/x_buno_doc_paragraph&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-09 19:26:45</sys_created_on>
+        <sys_id>fa40d97edba9485033995886dc9619f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>par - Terms on end of assignment 2</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_metadata_link_fa40d97edba9485033995886dc9619f8</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-09 19:26:45</sys_updated_on>
+        <tablename>x_buno_doc_paragraph</tablename>
+    </sys_metadata_link>
+</record_update>

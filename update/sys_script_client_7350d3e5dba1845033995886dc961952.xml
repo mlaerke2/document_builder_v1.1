@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>header_first_page</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Help for Header onChange</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+
+	var pdf = g_form.getValue('file_type') == 'pdf';
+	var customHeader = g_form.getValue('custom_headers_and_footers');
+
+	if (pdf || customHeader) {
+		return;
+	}
+
+	var message = "Use the following variables in Headers and footers:**${headerLogo}: inserts the 'Header Logo' from the template**${date}: inserts current date**${writtenDate}: inserts current date in format 'dd MMMMM yyyy' **${usersName}: inserts name if send from related UI Action**${pageNumber}: inserts the current page's number**${pageTotal}: inserts the total number of pages";
+
+	var messagArray = message.split('**');
+
+	for (var i=0; messagArray.length>i; i++)	{
+		g_form.showFieldMsg('header_first_page', messagArray[i], 'info');
+	}
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-12-06 07:33:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7350d3e5dba1845033995886dc961952</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Help for Header onChange</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_script_client_7350d3e5dba1845033995886dc961952</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-12-06 19:29:27</sys_updated_on>
+        <table>x_buno_doc_template</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Doc M2m Sections Templates (not used OOB)" max_length="40" name="x_buno_doc_m2m_sections_templates" type="collection">
+        <element attributes="encode_utf8=false" label="Section" max_length="32" name="section" reference="x_buno_doc_section" type="reference"/>
+        <element attributes="encode_utf8=false" label="Template" max_length="32" name="template" reference="x_buno_doc_template" type="reference"/>
+        <index name="index">
+            <element name="template"/>
+        </index>
+        <index name="index2">
+            <element name="section"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category">
+    <sys_properties_category action="INSERT_OR_UPDATE">
+        <name>Document Bulder Properties</name>
+        <sys_class_name>sys_properties_category</sys_class_name>
+        <sys_created_by>mla@businessnow.dk</sys_created_by>
+        <sys_created_on>2019-11-15 12:57:59</sys_created_on>
+        <sys_id>f511900fdbcd001033995886dc9619dd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Document Bulder Properties</sys_name>
+        <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
+        <sys_update_name>sys_properties_category_f511900fdbcd001033995886dc9619dd</sys_update_name>
+        <sys_updated_by>mla@businessnow.dk</sys_updated_by>
+        <sys_updated_on>2019-11-26 08:08:09</sys_updated_on>
+        <title><![CDATA[<h2>Document Bulder Properties</h2>]]></title>
+    </sys_properties_category>
+    <sys_translated_text action="delete_multiple" query="documentkey=f511900fdbcd001033995886dc9619dd"/>
+</record_update>
