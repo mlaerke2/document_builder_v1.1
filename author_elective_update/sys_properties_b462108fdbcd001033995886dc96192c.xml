@@ -23,7 +23,7 @@
         <value>&lt;div style="mso-element:footer" id=f1&gt; &lt;p class="MsoFooter" align="center" style="text-align:center"&gt;&lt;span style="font-size:7.0pt;font-family:Verdana,sans-serif"&gt;&lt;br/&gt;&lt;strong&gt;Maersk Drilling A/S &lt;/strong&gt;&lt;br/&gt; Lyngby Hovedgade 85 &amp;#8211; 2800 Kgs Lyngby &amp;#8211; Danmark &lt;br/&gt; Telefon: 6336 0000 &lt;br/&gt; www.maerskdrilling.com &lt;br/&gt; CVR no 32 67 38 21&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;</value>
         <write_roles>x_buno_doc.admin</write_roles>
     </sys_properties>
-    <sys_translated_text action="delete_multiple" query="documentkey=b462108fdbcd001033995886dc96192c"/>
+    <sys_translated_text action="DELETE" query="documentkey=b462108fdbcd001033995886dc96192c"/>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
         <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>

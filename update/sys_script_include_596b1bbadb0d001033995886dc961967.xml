@@ -379,7 +379,7 @@ DocumentBuilder.prototype = {
 				//get date in format: dd Month yyyy
 				var date = new DocumentBuilderUtil().getWrittenDate(now, this.templateLanguage);
 				this.writtenDate = date;
-				this.date = new GlideDate();
+				this.date = new GlideDate().getByFormat('dd-MM-YYYY');
 				var fileName;
 
 				//If name of Template contains "translation", add it to document name
@@ -458,7 +458,7 @@ DocumentBuilder.prototype = {
 				var checkForActiveParagraphs = this._checkForParagraphs(sectionID);
 
 				//Add this to the body - the section and the headline of it.
-				if (!sectionGR.exclude_headline && checkForActiveParagraphs) { 
+				if (!sectionGR.exclude_headline && (checkForActiveParagraphs || this.testFullDocument)) { 
 
 					currentSection++; //Add to the number calculator
 
@@ -530,6 +530,7 @@ DocumentBuilder.prototype = {
 			while (paragraph.next()) {
 
 				var condition = paragraph.getValue('condition');
+				var conditionDisplay = paragraph.getDisplayValue('condition');
 
 				//Check to see if paragraph is to be put in the body
 				var conditionMet = new DocumentBuilderUtil().checkCondition(condition, this.recordTable, this.recordID);
@@ -542,9 +543,9 @@ DocumentBuilder.prototype = {
 					if (this.testFullDocument){//used for ui action "Test Full Document"
 
 						if (gs.nil(condition))
-							condition = 'Always show';
+							conditionDisplay = 'Always show';
 
-						body += "<span style='font-family:"+this.DEFAULT_FONT+";font-size:"+this.DEFAULT_FONT_SIZE+"; mso-highlight: yellow;'>Condition: " + condition + ' </span> ';
+						body += "<span style='font-family:"+this.DEFAULT_FONT+";font-size:"+this.DEFAULT_FONT_SIZE+"; mso-highlight: yellow;'>Condition: " + conditionDisplay + ' </span> ';
 
 					} 
 					body += this._getParagraphHTML(paragraph, secID, curOrder, fileType);	
@@ -659,10 +660,12 @@ DocumentBuilder.prototype = {
 
 			var defaultParaStyling = "<p style='font-family:"+this.DEFAULT_FONT+";font-size:"+this.DEFAULT_FONT_SIZE+";text-align:"+this.DEFAULT_TEXT_ALIGN+";mso-pagination:widow-orphan lines-together; page-break: avoid; display: inline;";
 			defaultParaStyling += curOder == 1 ? "margin-top:0cm;'>" : "'>";//remove space between section header and first paragraph OR close p tag
+			var liTag = '<li><span style="font-family:'+this.DEFAULT_FONT+'; font-size:' + this.DEFAULT_FONT_SIZE + ';">';
 
 			//Swapping each <p> tags and adding our own <p> tags
 			this.LOG.logDebug('strippedHTMLtext 1: \nOrder: ' + curOder + '\n' + pa + '\n' + strippedHTMLtext);
 			strippedHTMLtext = strippedHTMLtext.replace(/(<p([^>]*?)>)/g, defaultParaStyling);
+			strippedHTMLtext = strippedHTMLtext.replace(/(<li([^>]*?)>)/g, liTag);
 			this.LOG.logDebug('strippedHTMLtext 2: \nOrder: ' + curOder + '\n' + pa + '\n' + strippedHTMLtext);
 
 			return strippedHTMLtext; 
@@ -1258,13 +1261,13 @@ DocumentBuilder.prototype = {
         <sys_created_by>mla@businessnow.dk</sys_created_by>
         <sys_created_on>2019-11-15 09:07:19</sys_created_on>
         <sys_id>596b1bbadb0d001033995886dc961967</sys_id>
-        <sys_mod_count>209</sys_mod_count>
+        <sys_mod_count>213</sys_mod_count>
         <sys_name>DocumentBuilder</sys_name>
         <sys_package display_value="Document Builder" source="x_buno_doc">c0538f36dbc9001033995886dc96195e</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Document Builder">c0538f36dbc9001033995886dc96195e</sys_scope>
         <sys_update_name>sys_script_include_596b1bbadb0d001033995886dc961967</sys_update_name>
         <sys_updated_by>mla@businessnow.dk</sys_updated_by>
-        <sys_updated_on>2019-12-05 23:23:24</sys_updated_on>
+        <sys_updated_on>2020-02-06 08:38:15</sys_updated_on>
     </sys_script_include>
 </record_update>

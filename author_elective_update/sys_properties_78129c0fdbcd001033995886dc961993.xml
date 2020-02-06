@@ -23,7 +23,7 @@
         <value>&lt;div style="mso-element:header" id=fh1&gt;&lt;span lang=EN-US style="mso-ansi-language:EN-US"&gt;${base64EncodedLogo}&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/div&gt;</value>
         <write_roles/>
     </sys_properties>
-    <sys_translated_text action="delete_multiple" query="documentkey=78129c0fdbcd001033995886dc961993"/>
+    <sys_translated_text action="DELETE" query="documentkey=78129c0fdbcd001033995886dc961993"/>
     <sys_update_version action="INSERT_OR_UPDATE">
         <action>DELETE</action>
         <application display_value="Document Builder">c0538f36dbc9001033995886dc96195e</application>
